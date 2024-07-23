@@ -1,0 +1,226 @@
+#map {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  margin-right: -5%;
+}
+.map_nav {
+  width: 100%;
+}
+.map_button {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 40px;
+  left: 70%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+.map_button .map_button1 {
+  height: 40px;
+  border: none;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 150px;
+  background-color: #ffcd4a;
+  font-weight: normal;
+  font-size: 16px;
+}
+.map_button .map_button2 {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #e8e8e8;
+}
+.map_button .map_button2 img {
+  width: 25px;
+  margin: auto;
+}
+.searchnav {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  width: 4.5%;
+  text-align: center;
+  z-index: 1;
+  font-size: 80%;
+  box-shadow: 5px;
+}
+.searchnav-right {
+  position: absolute;
+  background-color: white;
+  height: 100vh;
+  top: 10px;
+  margin-top: -10px;
+  left: 4.5%;
+  width: 23%;
+  text-align: start;
+  z-index: 1;
+}
+.searchnav_to_home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 35px auto;
+}
+.searchnav_to_home img {
+  width: 30%;
+  margin: auto;
+}
+.searchnav h5 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  margin: auto;
+}
+
+.searchnav h5:hover {
+  color: #ffcd4a;
+}
+.searchtest {
+  position: relative;
+  width: 20%;
+  flex: 1;
+}
+.searchnav_map img {
+  width: 30%;
+  margin: auto;
+}
+.searchnav_time img {
+  width: 30%;
+  margin: auto;
+}
+.searchnav_mypage img {
+  width: 30%;
+  margin: auto;
+}
+.searchnav_calendar img {
+  width: 30%;
+  margin: auto;
+}
+.searchnav_map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 35px auto;
+}
+.searchnav_time a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 35px auto;
+  color: black;
+}
+.searchnav_mypage a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  margin: 35px auto;
+}
+.searchnav_calendar a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  margin: 35px auto;
+}
+/* 마커 css */
+.wrap {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 288px;
+  height: 132px;
+  margin-left: -144px;
+  text-align: left;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
+  line-height: 1.5;
+}
+.wrap * {
+  padding: 0;
+  margin: 0;
+}
+.wrap .info {
+  width: 286px;
+  height: 120px;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  background: #fff;
+}
+.wrap .info:nth-child(1) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+.info .title {
+  padding: 5px 0 0 10px;
+  height: 30px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+}
+.info .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  width: 17px;
+  height: 17px;
+  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png");
+}
+.info .close:hover {
+  cursor: pointer;
+}
+.info .body {
+  position: relative;
+  overflow: hidden;
+}
+.info .desc {
+  position: relative;
+  margin: 13px 0 0 90px;
+  height: 75px;
+}
+.desc .ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.desc .jibun {
+  font-size: 11px;
+  color: #888;
+  margin-top: -2px;
+}
+.info .img {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 73px;
+  height: 71px;
+  border: 1px solid #ddd;
+  color: #888;
+  overflow: hidden;
+}
+.info:after {
+  content: "";
+  position: absolute;
+  margin-left: -6px;
+  left: 50%;
+  bottom: 0;
+  width: 22px;
+  height: 12px;
+  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+}
+.info .link {
+  color: #5085bb;
+}

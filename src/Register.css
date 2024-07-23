@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "HakgyoansimSantteutdotumL";
+    src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+  }
+
+.register {
+    background-image: url(./img/register-background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.register-container {
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;  
+}
+
+.register-title {
+    font-family: "HakgyoansimSantteutdotumL";
+    color: white;
+}
+
+.usertype-label {
+    margin-top: 1rem;
+}
+
+.login-titles {
+    margin-bottom: 1rem;
+}
+
+.register-title {
+    font-family: "HakgyoansimSantteutdotumL";
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    position: absolute; /* 또는 relative, 상황에 따라 다름 */
+  top: 130px; /* 상단에서부터의 거리, 상황에 맞게 조절 */
+  left: 50%; /* 가운데 정렬을 위한 설정 */
+  transform: translateX(-50%); /* 정확한 가운데 정렬을 위한 설정 */
+}
+
+.register-intro {
+    font-family: "HakgyoansimSantteutdotumL";
+    font-size: 1.3rem;
+    color: black;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-left: 6.5rem;
+    font-weight: 150;
+}
+
+.register-subtitle {
+    font-size: 1rem;
+    color: gray;
+}
+
+.register-box {
+    display: flex;
+    position: absolute;
+    top: 210px;
+    width: 27rem;
+    height: 28rem;
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    display: flex;
+    opacity: 0.97;
+    flex-direction: column;
+    padding-right: 2.5rem;
+    
+    
+    /* 그림자 효과 추가 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* X축 오프셋, Y축 오프셋, 흐림 반경, 색상 */
+  transition: box-shadow 0.3s ease-in-out; /* 그림자 효과에 애니메이션을 적용합니다. */
+}
+
+.register-box input {
+    height: 2rem;
+    margin-bottom: 1.2rem;
+    /* padding: 0.2rem; */
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "HakgyoansimSantteutdotumL";
+}
+
+
+.register-radio {
+    
+    align-items: center; 
+    justify-content: start; 
+    padding: 0rem;
+    border-radius: 7px;
+    justify-content: flex-start;  
+}
+
+.register-radio label {
+    
+    margin-right: 4.2rem; 
+    white-space: nowrap; 
+    /* height: 100%; */
+    font-family: "HakgyoansimSantteutdotumL";
+} 
+
+.usertype-label {
+    color: black;
+    font-family: "HakgyoansimSantteutdotumL";
+    margin-right: 1rem;
+}
+
+.register-radio-button {
+    margin: 0 0.5rem; 
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-right: 1rem;
+}
+
+.register-radio-button + .register-radio-button {
+    margin-left: 1rem; /* 라디오 버튼 사이의 간격 */
+  }
+
+input[type="radio"] {
+    margin: 0 0.5rem;
+    padding: 0;
+    vertical-align: middle; 
+    box-shadow: none;
+}
+
+.id-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1.0rem;
+}
+
+.id-section input {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    border: 2px solid green;
+} 
+
+.id-signin-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1.0rem;
+}
+
+.id-signin-error input{
+    width: 100%;
+    margin-bottom: 0.3rem;
+    border: 2px solid red;
+}
+
+.id-section button {
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    width: 4rem;
+    height: 1.4rem;
+    border: none;
+    border-width: 0.19rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: black;
+    background-color: #FFCD4A;
+    font-family: "HakgyoansimSantteutdotumL";
+    margin-left: 23rem;
+}
+
+.id-signin-error button {
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    width: 4rem;
+    height: 1.4rem;
+    border: none;
+    border-width: 0.19rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: black;
+    background-color: #FFCD4A;
+    font-family: "HakgyoansimSantteutdotumL";
+    margin-left: 23rem;
+}
+
+.register-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "HakgyoansimSantteutdotumL";
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+  
+.register-button button {
+    height: 2.5rem;
+    width: 10rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* color: #fff; */
+    color: black;
+    background-color: #FFCD4A;
+    font-family: "HakgyoansimSantteutdotumL";
+}
+
+.go-login-section {
+    font-family: "HakgyoansimSantteutdotumL";
+    /* margin-top: 1rem; */
+    margin-left: 6.5rem;
+    margin-top: 1rem;
+}
+
+.go-login{
+    color: black;
+    margin-left: 0.7rem;
+    text-decoration: underline;
+}
+.already-signin {
+    margin-left: 0.5rem;
+}
+
+.pwCheck-access {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 0.8rem;
+    margin-top: -0.8rem;
+}
+
+.pwCheck-deny {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 0.8rem;
+    margin-top: -0.8rem;
+    color: red;
+}

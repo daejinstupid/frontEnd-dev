@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.reservation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "HakgyoansimSantteutdotumL";
+  height: 160px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.reservation-item:hover {
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+ 
+.reservation-name {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.reservation-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+.reservation-info div {
+  margin-top: 5px;
+}
+
+
+.reservation-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.reservation-button button {
+  background-color: #FFCD4A;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.reservation-button button:hover {
+  background-color: #ffd876;
+}
+
+.reservation-no-exist{
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 25px;
+  color: #7c7c7c;
+  margin: 11rem;
+}
+
+.no-outline {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.loading-list{
+  margin-top: 16rem;
+}
+
+.loading-list p {
+  font-size: 1.4rem;
+  color: #a4a4a4;
+}

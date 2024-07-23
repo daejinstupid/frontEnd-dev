@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+.status-tab-full-container{
+  display: flex;
+  flex-direction: row;
+}
+.banner{
+  margin-right: -5rem;
+}
+.banner img{
+  width: 80%;
+}
+
+.status-tab-container {
+  width: 70%;
+  margin: auto;
+}
+
+.reservation-status-top {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.reservation-status-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "HakgyoansimSantteutdotumL";
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.status-tab-hr {
+  width: 20%;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.tab-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+}
+
+.tab-buttons button:focus {
+  outline: none;
+}
+
+.inProgressButton,
+.upcomingButton {
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #e8e8e8;
+  color: #000;
+  font-family: "HakgyoansimSantteutdotumL";
+}
+
+.inProgressButton {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.upcomingButton {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.inProgressButton.active,
+.upcomingButton.active {
+  background-color: #7cd0ff;
+  color: #fff;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  height: 38rem;
+}    

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+
+.cafe-name-title-container {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+  height: 100%;
+}
+
+
+.cafe-name-inputbox {
+  font-family: "HakgyoansimSantteutdotumL";
+  width: 30rem;
+  border: 1px solid #ccc;;
+  height: 100%;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.cafe-name-title {
+  display: flex;
+  justify-content: center;
+  width: 40rem;
+  height: 5rem;
+}

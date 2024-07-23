@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.userinfoupdate_form {
+  width: 100%;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "HakgyoansimSantteutdotumL";
+}
+.userinfoupdate_header {
+  width: 30%;
+  margin: 5% auto auto;
+}
+.userinfoupdate_header hr {
+  width: 50%;
+}
+.userpasswordupdate {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 30%;
+  margin: -2% auto auto;
+}
+.userpasswordupdate input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 20px;
+}
+
+.userinfoupdatebutton {
+  width: 20%;
+  margin: -10% auto auto;
+}
+.userinfoupdatebutton button {
+  width: 50%;
+  font-size: 130%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcd4a;
+}
+.userinfoupdatebutton h5 {
+  margin: auto;
+}

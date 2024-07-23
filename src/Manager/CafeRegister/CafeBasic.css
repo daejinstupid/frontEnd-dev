@@ -1,0 +1,63 @@
+
+.cafe-register-basic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ccc;
+  width: 40rem;
+  margin-bottom: 1rem;
+  
+}
+
+.cafe-register-basic p {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.time-picker-div label{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+
+.register-time-picker{
+  width: 19rem;
+  height: 1.5rem;
+  font-size: 1.4rem !important;
+  text-align: center;
+}
+
+.register-time-picker:last-child{
+  margin-bottom: 1rem;
+}
+
+.register-addr button{
+  margin-left: 2rem;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #FFCD4A;
+  margin-right: 2rem;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.register-addr input, 
+.register-addr-extra input,
+.register-tel input {
+  margin-left: 2rem;
+  width: 25rem;
+  height: 3rem;
+  color: black;
+}
+
+.register-addr input:last-child, 
+.register-addr-extra input:last-child, 
+.register-tel input:last-child {
+  margin-bottom: 2rem;
+}
+.error{
+  border: solid red;
+}

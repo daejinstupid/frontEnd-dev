@@ -1,0 +1,31 @@
+.user_cafe_info_slide .slick-slider {
+  position: relative;
+}
+
+.cafe_info_next,
+.cafe_info_prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  border: none;
+}
+.slick-slide img {
+  width: 90%;
+  height: 200px;
+}
+
+.cafe_info_next {
+  right: -12%;
+}
+
+.cafe_info_prev {
+  left: -12%;
+}
+.cafe_info_prev img,
+.cafe_info_next img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}

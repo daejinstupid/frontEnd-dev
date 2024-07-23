@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.myUserInfo-container {
+  width: 60%;
+  margin: auto;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myUserInfo-title {
+  height: 15%;
+}
+
+.myUserInfo-title p {
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "HakgyoansimSantteutdotumL";
+  text-align: center;
+}
+
+.myUserInfo-container hr {
+  width: 30%;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.myUserInfo-inform {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "HakgyoansimSantteutdotumL";
+  line-height: 1.3;
+}
+
+.myUserInfo-inform span {
+  color: red;
+}
+
+.myUserInfo-input {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.myUserInfo-input label {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.myUserInfo-input input {
+  font-size: 30px;
+  border: 1px solid #a1a1a1;
+  padding: 0.5rem;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.myUserInfo-button {
+  text-align: center;
+  height: 20%;
+}
+
+.myUserInfo-button button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffcd4a;
+}

@@ -1,0 +1,32 @@
+.image-input div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.image-input p {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.study-img-file {
+  width: 9rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  background-color: #FFCD4A;
+  margin-right: 2rem;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.study-img-file:hover{
+  cursor: pointer;
+}

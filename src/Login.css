@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.login {
+  background-image: url(./img/register-background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+
+.login-title {
+  color: white;
+  display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    position: absolute; /* 또는 relative, 상황에 따라 다름 */
+  top: 130px; /* 상단에서부터의 거리, 상황에 맞게 조절 */
+  left: 50%; /* 가운데 정렬을 위한 설정 */
+  transform: translateX(-50%); /* 정확한 가운데 정렬을 위한 설정 */
+  font-family: "HakgyoansimSantteutdotumL";
+  
+}
+
+.login-box {
+  display: flex;
+    position: absolute;
+    top: 210px;
+    width: 27rem;
+    height: 24.4rem;
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    display: flex;
+    opacity: 0.97;
+    flex-direction: column;
+    
+    /* 그림자 효과 추가 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* X축 오프셋, Y축 오프셋, 흐림 반경, 색상 */
+  transition: box-shadow 0.3s ease-in-out; /* 그림자 효과에 애니메이션을 적용합니다. */
+}
+
+.login-intro {
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 1.3rem;
+    color: black;
+    font-weight: 150;
+    margin-bottom: 0.5rem;
+    margin-left: 4.5rem;
+}
+
+.login-inputs {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.login-box input {
+  font-family: "HakgyoansimSantteutdotumL";
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0px;
+  font-size: 1rem;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.id {
+  font-family: "HakgyoansimSantteutdotumL";
+  margin-bottom: 1rem;
+  margin-left: 0.4rem;
+}
+
+.pw {
+  font-family: "HakgyoansimSantteutdotumL";
+  margin-bottom: 1rem;
+  margin-left: 0.4rem;
+}
+
+.id-box {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.pw-box {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.login-button {
+  width: 7rem;
+  display: flex;
+  margin-left: 10.5rem;
+  margin-top: 1rem;
+  font-family: "HakgyoansimSantteutdotumL";
+}
+
+.login-button button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #FFCD4A;
+  color: black;
+}
+
+.go-register-section {
+  font-family: "HakgyoansimSantteutdotumL";
+  margin-top: 1.6rem;
+  margin-left: 4.3rem;
+}
+
+.go-register {
+  margin-left: 1rem;
+  color: black;
+  text-decoration: underline;
+}

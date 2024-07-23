@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.reservation-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-family: "HakgyoansimSantteutdotumL";
+  margin-top: -70px;
+}
+.reservation_username {
+  width: 40%;
+  margin: auto;
+  margin-top: 20vh;
+  text-align: center;
+}
+.reservation_status_text {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 200%;
+  margin: auto;
+}
+.reservation_username h1 {
+  margin: auto;
+}
+.reservation_username hr {
+  width: 45%;
+}
+.reservation_username h1 span {
+  font-weight: 900;
+}
+.progress-bar {
+  width: 60%;
+  background-color: #ffcd4a;
+  height: 50px;
+  margin: auto;
+  border-radius: 100px;
+  padding-top: 14px;
+  margin-bottom: 0vh;
+}
+.progressbar_1 {
+  width: 40px;
+  margin: auto;
+  background-color: white;
+  height: 36px;
+  border-radius: 100px;
+  margin-left: 2%;
+}
+.progressbar_2 {
+  width: 95%;
+  margin: auto;
+  background-color: white;
+  height: 36px;
+  border-radius: 100px;
+  margin-left: 2%;
+}
+
+.reservation_bottom {
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 140px;
+}
+.reservation_bottom h4 {
+  font-size: 200%;
+}
+.reservation_bottom span {
+  color: #7cd0ff;
+}
+.link_reservationList {
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+.link_reservationList button {
+  padding: 25px;
+  font-size: 150%;
+  font-weight: bold;
+  border: none;
+  background-color: #ffcd4a;
+  border-radius: 10px;
+}
+.status_footer {
+  margin-top: 10vh;
+}

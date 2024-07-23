@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+p,
+span,
+h2,
+label {
+  font-family: "HakgyoansimSantteutdotumL";
+}
+
+input {
+  padding-left: 1rem;
+}
+
+button {
+  font-family: "HakgyoansimSantteutdotumL";
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset : 6px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  padding-left: 1rem;
+}
+

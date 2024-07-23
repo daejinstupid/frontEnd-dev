@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.cafe-register-title {
+  font-family: "HakgyoansimSantteutdotumL";
+}
+
+.cafeFeature-Chips {
+  font-family: "HakgyoansimSantteutdotumL";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.3rem;
+  
+  
+}
+
+.cafeFeature-Chips button{
+  justify-content: center;
+  display: flex;
+  width: 13rem;
+  height: 3.5rem;
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 1.5rem;
+  align-items: center;
+  
+}
+
+.select-Features{
+  background-color: #7CD0FF;
+  color: black;
+}

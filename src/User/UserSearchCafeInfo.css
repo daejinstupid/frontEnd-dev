@@ -1,0 +1,54 @@
+.UserSearchCafeInfo_header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-left: 5%;
+}
+.UserSearchCafeInfo_header img {
+  width: 25px;
+  height: 25px;
+  margin-top: 3%;
+  margin-left: 85%;
+  cursor: pointer;
+}
+
+.usersearchcafeinfo_img {
+  width: 80%;
+  margin: auto;
+}
+.usersearchcafeinfo_img img {
+  width: 100%;
+  margin: auto;
+}
+.usersearchcafeinfo_section {
+  display: flex;
+  flex-direction: column;
+
+  margin: 30px 0 100px 10px;
+}
+.usersearchcafeinfo_sections {
+  display: flex;
+}
+.usersearchcafeinfo_sections img {
+  width: 15px;
+  height: 15px;
+  margin: 24px auto;
+}
+.usersearchcafeinfo_sections p {
+  width: 93%;
+  margin-left: 10px;
+  margin-top: 24px;
+}
+.go_to_reservation {
+  margin: auto;
+  text-align: center;
+}
+.go_to_reservation button {
+  background-color: #ffcd4a;
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}

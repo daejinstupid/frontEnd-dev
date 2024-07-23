@@ -1,0 +1,53 @@
+
+.ManagerSide-container{
+width: 15rem;
+margin-left:8rem;
+margin-top: 3rem;
+position: fixed;
+}
+
+.ManagerSide-container-items{
+display: flex;
+flex-flow: column;
+justify-content: space-around;
+text-align: center;
+height: auto;
+background-color: white;
+border: 0.05rem solid;
+}
+
+.updatecafebasic.active {
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.ManagerSide-container-items p{
+    font-size: 1rem;
+    margin : 1.3rem 1.5rem;
+    text-align: left;
+}
+
+.updateText {
+  padding: 1rem;
+}
+
+
+.updateText span{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.yellow {
+  background-color: #ffcd4a;
+  opacity: 0.8;
+}
+
+.no-select {
+  color: rgb(196, 196, 196);
+}

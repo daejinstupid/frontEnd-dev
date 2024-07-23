@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+button{
+  text-decoration: none;
+}
+
+
+
+.register-full-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 80rem;
+  justify-content: center;
+ 
+
+  background-image: url(./../../img/cafeindexbg2.png); 
+  opacity: 0.7;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
+}
+
+
+
+
+.register-stepbox {
+  display: flex;
+  width: auto;
+  height: auto;
+  /* margin-top: 2rem;  */
+  padding: none;
+  /* border: 0.2rem solid gray;
+  border-radius: 5rem; */
+  box-shadow: none;
+  opacity: none !important;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15%;
+} 
+
+.cafe-register-box{
+  height: auto;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  
+  border-radius: 10px;
+  
+}
+.cafe-register-box input {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cafe-register-box input::placeholder{
+  font-size: 1rem;
+  
+}
+.register-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  /* background-color: #FFCD4A; */
+}
+
+.stepNumber {
+  font-family: "HakgyoansimSantteutdotumL";
+  color: #FFCD4A;
+  margin-right: 0.9rem;
+  font-size: 2rem;
+  
+}
+
+.totalNumber {
+  font-family: "HakgyoansimSantteutdotumL";
+  color: black;
+  font-size: 2rem;
+}
+.button-container-total{
+
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+
+}
+.button-container {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  margin: 1rem 0;
+  
+}
+
+.bg{
+  width: 27.5rem;
+  height: auto;
+  background-image: url(./../../../public/assets/sideground.jpg); 
+  opacity: 0.7;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
+
+}
+
+.register-buttons {
+  width:50rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.previous {
+  background:none !important;
+  opacity: 0.9;
+  border: none;
+  font-size: 4rem;
+}
+
+.previous:hover {
+  border: none;
+  color: #FFCD4A;
+  font-size: 4rem;
+}
+
+.button-previous, .button-next {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  
+}
+
+.next {
+  background:none !important;
+  border: none;
+  opacity: 0.9;
+  font-size: 4rem;
+}
+
+
+.next:hover {
+  border: none;
+  color: #FFCD4A;
+  font-size: 4rem;
+}
+
+.hr1 {
+  border-color: gray;
+  width:30rem;
+}
+
+.cafe-final-register{
+  margin-top: 2rem;
+  width: 8rem;
+  height: 2.5rem;
+}

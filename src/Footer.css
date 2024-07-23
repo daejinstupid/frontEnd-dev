@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid #e6e6e6;
+}
+.footer_text {
+  font-family: "SUITE-Bold";
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 15px;
+  margin-left: 10%;
+}
+footer img {
+  width: 8%;
+  text-align: end;
+  margin-right: 10%;
+}

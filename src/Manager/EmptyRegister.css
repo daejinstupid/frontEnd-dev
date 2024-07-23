@@ -1,0 +1,63 @@
+.EmptyRegister-container {
+  
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  align-items: center; /* 아이템들을 수직 가운데 정렬합니다. */
+  background-image: url(./../../public/assets/sideground.jpg); 
+  opacity: 0.7;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
+}
+
+.EmptyRegister-items {
+  background-color: rgba(254, 255, 240, 0.9);
+  border-radius: 10px;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-flow: column;
+  text-align: center; /* 아이템들을 가로 가운데 정렬합니다. */
+  justify-content: center;
+}
+
+.EmptyRegister-img-div {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 이미지를 수직 가운데 정렬합니다. */
+  margin-bottom: 2rem;
+}
+
+.EmptyRegister-items img {
+  width: 15rem;
+  height: 15rem;
+  padding: 2rem;
+  border-radius: 50%;
+  border: 3px solid black;
+  /* text-align: center; 이미지는 텍스트와 관련이 없으므로 이 속성은 제거합니다. */
+}
+
+.EmptyRegister-items p {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.EmptyRegister-button-div{
+  margin-top: 2rem;
+}
+
+.EmptyRegister-items button {
+  background-color: rgb(254, 255, 240);
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 15rem;
+  height: 4rem;
+  font-size: 1.5rem;
+}

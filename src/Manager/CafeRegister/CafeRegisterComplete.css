@@ -1,0 +1,46 @@
+.caferegistercomplete {
+  height: 71vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.registercomp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 25rem;
+  text-align: center;
+}
+
+.v {
+  background-color: #ffcd4a;
+  background-size: cover; /* 이미지를 컨테이너에 맞게 조절 */
+  width: 250px;
+  height: 250px;
+  border-radius: 1000rem;
+  font-size: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: -40px;
+}
+
+.v img{
+  width: 160px;
+  height: 160px;
+  margin: auto;
+}
+
+.register-comp-content {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.register-comp-content p{
+  padding-top: 50px;
+}

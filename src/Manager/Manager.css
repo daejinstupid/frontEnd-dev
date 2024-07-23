@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+.manager_index {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120vh;
+  
+}
+.manager_index_text {
+  
+  font-family: "HakgyoansimSantteutdotumL";
+  background-image: url(./../img/cafeindexbg.png); 
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 50vh;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 6rem;
+  padding-bottom: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+.manager_index_text h1 {
+  font-size: 500%;
+  font-style: italic;
+  font-family: "HakgyoansimSantteutdotumL";
+  color: white;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9); /* X축 2px, Y축 2px, 흐림 반경 4px, 반투명 검정색 */
+}
+
+.manager_index_text p {
+  font-size: 150%;
+  font-family: "HakgyoansimSantteutdotumL";
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 큰 그림자 효과 */
+}
+
+.manager_index_img {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+.manager_index_img img {
+  width: 20%;
+}

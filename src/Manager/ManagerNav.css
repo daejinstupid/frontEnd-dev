@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+.manager_nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "HakgyoansimSantteutdotumL";
+  opacity: 0.8;
+  height: 130px;
+  border-bottom: 1px solid black;
+  position: relative;
+  z-index: 1;
+}
+.header_img {
+  width: 30%;
+  margin: auto;
+}
+.header_img img {
+  width: 50%;
+  margin-left: 80px;
+  padding-top: 10px;
+}
+.manager_nav_item {
+  /* background-color: #ffcd4a; */
+  position: relative;
+  width: 40%;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  height: 130px;
+  margin-right: -150px;
+}
+.manager_nav_item h3 {
+  color: black;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 130%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.manager_dropdown_content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-right: -30px;
+  background-color: #e8e8e8;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  margin-left: -10px;
+}
+.manager_nav_item h3:hover {
+  color: red;
+}
+.manager_nav_item:hover .manager_dropdown_content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 100;
+  left: 15%;
+}
+
+.manager_dropdown_content p {
+  color: black;
+  font-family: "HakgyoansimSantteutdotumL";
+}
+.manager_dropdown_content p:hover {
+  font-weight: bold;
+}
+.header_right {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 1rem;
+  justify-content: end;
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+

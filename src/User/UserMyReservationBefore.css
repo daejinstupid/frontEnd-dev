@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "HakgyoansimSantteutdotumL";
+  src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
+}
+
+.user_reservation-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: space-around;
+  padding: 30px;
+  font-family: "HakgyoansimSantteutdotumL";
+  height: 100px;
+  width: 100%;
+}
+
+.divider {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+.user_reservation_row_before {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -20px;
+}
+.user_reservation_text_before {
+  width: 70%;
+  text-align: center;
+  margin-left: 20px;
+}
+.user_cafe_name_before {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: -80px;
+}
+
+.user_inprogress-info_before {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 20px;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-right: -70px;
+}
+.user_inprogress-info_before p {
+  margin-left: 100px;
+}
+.user_inprogress-info_before div {
+  margin-top: 5px;
+}
+
+.user_reservation_application_before {
+  margin: 0 -30px 0;
+  width: 30%;
+  text-align: center;
+}
+.user_reservation_application_before h4 {
+  font-size: 150%;
+  width: 100%;
+  margin: auto;
+  color: rgb(255, 74, 74);
+}
+.user_reservation_progress_before {
+  margin: 0 -30px 0;
+
+  width: 30%;
+  text-align: center;
+}
+.user_reservation_progress_before h4 {
+  font-size: 150%;
+  width: 100%;
+}
+
+.user_myReservation_no_exist {
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 25px;
+  color: #7c7c7c;
+  text-align: center;
+  margin: 11rem;
+}
+
+.user_reservation_cafe_img {
+  flex: 0 0 auto;
+  width: 30%;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_reservation_cafe_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user_myReservation_loading {
+  font-size: 1.4rem;
+  color: #a4a4a4;
+  text-align: center;
+  margin: 11rem;
+  margin-right: -180px;
+}
+.user_reservation_cafe_img {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_reservation_cafe_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
