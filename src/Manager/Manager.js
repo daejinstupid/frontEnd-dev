@@ -19,7 +19,17 @@ const Manager = () => {
       <ManagerNav />
       <div className={`manager_index_text ${isLoaded ? "show" : ""}`}>
         <h1>cafe-in</h1>
-        
+        <p>
+          저희 cafe-in 플랫폼은 카페 직원들이 고객뿐만 아니라 스터디와 협업을 원하는 분들에게 최적의 매칭 서비스를 제공하도록 돕습니다.
+        </p>
+        <p>
+          직원들은 효율적인 예약 시스템을 통해 판매를 최적화하고 테이블 회전율을 높일 수 있으며, 이는 매출 증가로 이어집니다.
+        </p>
+        <p>
+          커피와 학습, 네트워킹이 어우러진 공간을 관리하는 카페인의 직원이 되어, 혁신적인 카페 운영 경험을 직접 체험해 보세요. 
+        </p>
+        <p>이제 카페는 단순한 휴식 공간을 넘어 다양한 가능성을 제공합니다.
+        </p>
       </div>
       <div className="advantages_section">
         <h2>cafe-in을 선택해야 하는 4가지 이유</h2>
@@ -36,7 +46,7 @@ const Manager = () => {
         <div className="image-container">
           <img src="assets/small_img2.JPEG" alt="이미지 2" />
           <div className="overlay-text">
-          고객의 예약을 보다 효과적으로 지원하여 자원 낭비를 <br></br> 줄이고 카페 운영의 효율성을 극대화합니다.
+          고객의 예약을 보다 효과적으로 지원하여 <br></br>자원 낭비를 줄이고 <br></br> 카페 운영의 효율성을 <br></br>극대화합니다.
           </div>
           <div className="caption">효율적인 제공</div>
         </div>
