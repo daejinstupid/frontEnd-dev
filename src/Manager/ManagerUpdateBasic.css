@@ -15,7 +15,6 @@
 
 .ManagerUpdateBasic-Container-Items {
     width: 50%;
-    
     display: flex;
     flex-flow: column;
     margin-bottom: 3rem;
@@ -43,7 +42,7 @@
 
 .ManagerUpdateBasic-Container-Items input {
     margin-top: 1rem;
-    height: 5rem;
+    height: 3rem;
     border-radius: 8px;
     font-size: 20px;
     margin-left: 10%;

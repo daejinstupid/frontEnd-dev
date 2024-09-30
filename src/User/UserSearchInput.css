@@ -14,33 +14,38 @@
 .searchinput_form hr {
   margin: 3vh 0 3vh;
 }
+
 .searchinput_header {
   text-align: center;
   background-color: #ffcd4a;
   height: 130px;
 }
+
 .searchinput_header img {
   width: 40%;
   margin: auto;
   margin-top: -18px;
   padding-bottom: 10px;
 }
+
 .page_white {
   background-color: white;
   width: 100%;
   margin-top: -5px;
 }
+
 .searchinput_form .img_x {
   width: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   height: 15px;
   margin: 0;
   margin-left: 90%;
   padding-top: 10px;
   cursor: pointer;
 }
+
 .searchinput_input {
   display: flex;
   flex-direction: row;
@@ -55,9 +60,11 @@
   margin: 5px auto 0 -14%;
   cursor: pointer;
 }
+
 .searchinput_input img.visited {
   width: 23px;
 }
+
 .searchinput_header input {
   width: 85%;
   height: 30px;
@@ -67,6 +74,7 @@
   background-color: #f4ebd2;
   border: none;
 }
+
 .searchinput_section1 {
   display: flex;
   flex-direction: row;
@@ -74,6 +82,7 @@
   margin: 15px auto;
   width: 100%;
 }
+
 .searchinput_section1 select {
   width: 90px;
   border-radius: 20px;
@@ -90,15 +99,16 @@
   font-weight: normal;
   font-size: 16px;
 }
+
 .search_button_filter {
   width: 30%;
 }
+
 .search_button_filter button {
   width: 100%;
   display: flex;
   justify-content: space-around;
   box-shadow: 1px 2px #929292;
-
   border: none;
 }
 
@@ -106,30 +116,14 @@
   width: 25%;
   margin: auto;
 }
+
 .search_button_filter p {
   margin: auto;
 }
-.searchinput_section1 button.active {
-  background-color: #f4ebd2;
-  color: #dea71d;
-  font-weight: bold;
-  border: 1px solid #ffcd4a;
-  box-shadow: 1px 1px;
-}
-.searchinput_section2 button.active {
-  background-color: #f4ebd2;
-  color: #dea71d;
-  font-weight: bold;
-  border: 1px solid #ffcd4a;
-  box-shadow: 1px 1px;
-}
-.searchinput_section3 button.active {
-  background-color: #f4ebd2;
-  color: #dea71d;
-  font-weight: bold;
-  border: 1px solid #ffcd4a;
-  box-shadow: 1px 1px;
-}
+
+.searchinput_section1 button.active,
+.searchinput_section2 button.active,
+.searchinput_section3 button.active,
 .searchinput_toggle button.active {
   background-color: #f4ebd2;
   color: #dea71d;
@@ -158,12 +152,14 @@
   font-weight: normal;
   font-size: 16px;
 }
+
 .searchinput_section3 {
   margin: 25px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .searchinput_section3 button {
   width: 80px;
   height: 30px;
@@ -174,6 +170,7 @@
   font-weight: normal;
   font-size: 16px;
 }
+
 .section3_toggle button {
   width: 35px;
   border-radius: 12px;
@@ -183,6 +180,7 @@
   font-size: 200%;
   margin: auto;
 }
+
 .section3_toggle img {
   width: 70%;
   margin: 0 auto 10%;
@@ -191,9 +189,11 @@
 .section3_toggle button:hover {
   font-weight: 900;
 }
+
 .searrch_toggle_btn button {
   background-color: #929292;
 }
+
 .searchinput_toggle {
   display: flex;
   flex-direction: row;
@@ -201,6 +201,7 @@
   margin-left: 3.1%;
   width: 76%;
 }
+
 .searchinput_toggle button {
   width: 80px;
   height: 30px;
@@ -221,10 +222,10 @@
   color: black;
   border: none;
 }
+
 .search_cafe_info_list {
   width: 90%;
   height: 55vh;
-
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -242,13 +243,16 @@
   justify-content: space-around;
   border-bottom: 1px solid black;
 }
+
 .search_cafe_info_img {
   width: 30%;
 }
+
 .search_cafe_info_img img {
   width: 100%;
   height: 80px;
 }
+
 .search_cafe_info_text {
   width: 70%;
   height: 85px;
@@ -258,6 +262,7 @@
   text-align: left;
   margin-top: -10px;
 }
+
 .search_cafe_info_text h5 {
   font-size: 100%;
   margin: 5px auto -5px;
@@ -268,6 +273,7 @@
   white-space: nowrap;
   margin: auto 0.5rem;
 }
+
 .search_cafe_info_text p {
   margin-left: 10px;
   font-size: 70%;
@@ -279,6 +285,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .searchcafeinfo {
   position: absolute;
   background-color: white;
@@ -291,9 +298,11 @@
   z-index: 1;
   border-left: 1px solid black;
 }
+
 .user_search_pagination {
   text-align: center;
 }
+
 .user_search_pagination button {
   border: none;
   font-size: 100%;
@@ -301,26 +310,130 @@
   background-color: rgb(246, 243, 243);
   margin: auto 2px;
 }
+
 .user_search_pagination button.active {
   font-weight: bold;
   color: #46a2f4;
 }
+
 .spinner-container {
   margin: auto;
   margin-top: 250px;
-
   color: #929292;
 }
+
 .no-results {
   margin: auto;
   margin-top: 220px;
 }
+
 .no-results img {
   width: 10%;
   border: 2px solid #c8c8c8;
   border-radius: 100px;
   padding: 10px;
 }
+
 .no-results h4 {
   color: #c8c8c8;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 적용 */
+@media screen and (max-width: 768px) {
+  .searchinput_header img {
+    width: 60%; /* 로고 이미지 크기 조정 */
+  }
+
+  .searchinput_header input {
+    width: 95%; /* 검색창 너비 조정 */
+  }
+
+  .searchinput_section1,
+  .searchinput_section2,
+  .searchinput_section3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchinput_section1 select,
+  .searchinput_section1 button,
+  .searchinput_section2 button,
+  .searchinput_section3 button {
+    width: 100%; /* 버튼과 셀렉트 박스 너비 확장 */
+    margin-bottom: 10px;
+  }
+
+  .search_button_filter {
+    width: 100%;
+  }
+
+  .search_submit button {
+    width: 80%; /* 검색 버튼 크기 조정 */
+  }
+
+  .search_cafe_info {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search_cafe_info_img {
+    width: 100%;
+  }
+
+  .search_cafe_info_text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 적용 */
+@media screen and (max-width: 480px) {
+  .searchinput_header img {
+    width: 50%; /* 더 작은 화면에서 로고 이미지 크기 조정 */
+  }
+
+  .searchinput_header input {
+    width: 90%; /* 검색창 너비 조정 */
+  }
+
+  .searchinput_section1 select,
+  .searchinput_section1 button,
+  .searchinput_section2 button,
+  .searchinput_section3 button {
+    width: 100%; /* 버튼과 셀렉트 박스 너비 확장 */
+    font-size: 14px; /* 폰트 크기 줄임 */
+    margin-bottom: 8px;
+  }
+
+  .search_button_filter button {
+    font-size: 14px; /* 버튼 내 텍스트 크기 조정 */
+  }
+
+  .search_submit button {
+    width: 90px; /* 검색 버튼 크기 축소 */
+    font-size: 14px; /* 폰트 크기 줄임 */
+  }
+
+  .search_cafe_info {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search_cafe_info_img {
+    width: 100%;
+  }
+
+  .search_cafe_info_text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .user_search_pagination button {
+    width: 20px; /* 페이지네이션 버튼 크기 조정 */
+  }
+  
 }

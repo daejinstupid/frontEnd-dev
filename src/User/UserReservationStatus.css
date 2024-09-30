@@ -11,12 +11,14 @@
   font-family: "HakgyoansimSantteutdotumL";
   margin-top: -70px;
 }
+
 .reservation_username {
   width: 40%;
   margin: auto;
   margin-top: 20vh;
   text-align: center;
 }
+
 .reservation_status_text {
   width: 60%;
   display: flex;
@@ -25,15 +27,19 @@
   font-size: 200%;
   margin: auto;
 }
+
 .reservation_username h1 {
   margin: auto;
 }
+
 .reservation_username hr {
   width: 45%;
 }
+
 .reservation_username h1 span {
   font-weight: 900;
 }
+
 .progress-bar {
   width: 60%;
   background-color: #ffcd4a;
@@ -43,6 +49,7 @@
   padding-top: 14px;
   margin-bottom: 0vh;
 }
+
 .progressbar_1 {
   width: 40px;
   margin: auto;
@@ -51,6 +58,7 @@
   border-radius: 100px;
   margin-left: 2%;
 }
+
 .progressbar_2 {
   width: 95%;
   margin: auto;
@@ -65,16 +73,20 @@
   margin-top: 0px;
   margin-bottom: 140px;
 }
+
 .reservation_bottom h4 {
   font-size: 200%;
 }
+
 .reservation_bottom span {
   color: #7cd0ff;
 }
+
 .link_reservationList {
   margin-top: -100px;
   margin-bottom: 100px;
 }
+
 .link_reservationList button {
   padding: 25px;
   font-size: 150%;
@@ -83,6 +95,125 @@
   background-color: #ffcd4a;
   border-radius: 10px;
 }
+
 .status_footer {
   margin-top: 10vh;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .reservation_username {
+    width: 80%; /* 유저 이름 영역의 너비 조정 */
+    margin-top: 10vh;
+  }
+
+  .reservation_status_text {
+    width: 90%; /* 상태 텍스트의 너비를 줄여 작은 화면에 맞춤 */
+    font-size: 150%; /* 텍스트 크기 조정 */
+    flex-direction: column;
+  }
+
+  .progress-bar {
+    width: 80%; /* 프로그레스 바 너비 조정 */
+    height: 40px;
+    padding-top: 10px;
+  }
+
+  .progressbar_1, .progressbar_2 {
+    height: 30px;
+  }
+
+  .reservation_bottom h4 {
+    font-size: 180%; /* 텍스트 크기 조정 */
+  }
+
+  .link_reservationList button {
+    padding: 20px;
+    font-size: 130%; /* 버튼 크기 줄임 */
+  }
+
+  .reservation_bottom {
+    margin-bottom: 100px; /* 하단 여백 조정 */
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .reservation_username {
+    width: 90%;
+    margin-top: 5vh;
+  }
+
+  .reservation_status_text {
+    width: 100%;
+    font-size: 130%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .progress-bar {
+    width: 90%;
+    height: 35px;
+    padding-top: 8px;
+  }
+
+  .progressbar_1, .progressbar_2 {
+    height: 25px;
+  }
+
+  .reservation_bottom h4 {
+    font-size: 150%;
+  }
+
+  .link_reservationList button {
+    padding: 15px;
+    font-size: 120%;
+  }
+
+  .status_footer {
+    margin-top: 5vh;
+  }
+
+  /* 430x932 해상도에 맞춘 반응형 설정 */
+@media screen and (max-width: 430px) {
+  .reservation_username {
+    width: 95%; /* 이름 영역을 더 넓게 */
+    margin-top: 7vh; /* 상단 여백 조정 */
+  }
+
+  .reservation_status_text {
+    width: 100%;
+    font-size: 120%; /* 텍스트 크기를 더 줄임 */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .progress-bar {
+    width: 100%; /* 프로그레스 바를 화면에 꽉 차도록 */
+    height: 35px;
+    padding-top: 6px; /* 높이 줄임 */
+  }
+
+  .progressbar_1, .progressbar_2 {
+    height: 25px; /* 프로그레스 바 안의 높이 조정 */
+  }
+
+  .reservation_bottom h4 {
+    font-size: 140%; /* 텍스트 크기를 조금 더 줄임 */
+  }
+
+  .link_reservationList button {
+    padding: 12px; /* 버튼 크기를 더 줄임 */
+    font-size: 110%; /* 버튼 텍스트 크기 조정 */
+  }
+
+  .status_footer {
+    margin-top: 4vh; /* 하단 여백 추가 */
+  }
+
+  .reservation_bottom {
+    margin-bottom: 80px; /* 하단 여백 추가 조정 */
+  }
+}
+
 }

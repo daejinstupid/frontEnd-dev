@@ -6,6 +6,7 @@
   margin: auto;
   margin-left: 5%;
 }
+
 .UserSearchCafeInfo_header img {
   width: 25px;
   height: 25px;
@@ -18,37 +19,101 @@
   width: 80%;
   margin: auto;
 }
+
 .usersearchcafeinfo_img img {
   width: 100%;
   margin: auto;
 }
+
 .usersearchcafeinfo_section {
   display: flex;
   flex-direction: column;
-
   margin: 30px 0 100px 10px;
 }
+
 .usersearchcafeinfo_sections {
   display: flex;
 }
+
 .usersearchcafeinfo_sections img {
   width: 15px;
   height: 15px;
   margin: 24px auto;
 }
+
 .usersearchcafeinfo_sections p {
   width: 93%;
   margin-left: 10px;
   margin-top: 24px;
 }
+
 .go_to_reservation {
   margin: auto;
   text-align: center;
 }
+
 .go_to_reservation button {
   background-color: #ffcd4a;
   width: 70%;
   height: 40px;
   border: none;
   border-radius: 10px;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 적용 */
+@media screen and (max-width: 768px) {
+  .UserSearchCafeInfo_header img {
+    width: 20px;
+    height: 20px;
+    margin-left: 80%; /* 아이콘 위치 조정 */
+  }
+
+  .usersearchcafeinfo_img {
+    width: 90%; /* 이미지 영역을 더 넓게 */
+  }
+
+  .usersearchcafeinfo_sections img {
+    width: 12px; /* 아이콘 크기 줄임 */
+    height: 12px;
+  }
+
+  .usersearchcafeinfo_sections p {
+    width: 90%;
+    font-size: 14px; /* 텍스트 크기 줄임 */
+  }
+
+  .go_to_reservation button {
+    width: 80%; /* 버튼 크기 조정 */
+    height: 35px;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 적용 */
+@media screen and (max-width: 480px) {
+  .UserSearchCafeInfo_header img {
+    width: 18px;
+    height: 18px;
+    margin-left: 75%;
+  }
+
+  .usersearchcafeinfo_img {
+    width: 100%;
+  }
+
+  .usersearchcafeinfo_sections img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .usersearchcafeinfo_sections p {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 15px; /* 텍스트 상단 여백 조정 */
+  }
+
+  .go_to_reservation button {
+    width: 90%;
+    height: 30px;
+    font-size: 14px; /* 버튼 폰트 크기 줄임 */
+  }
 }

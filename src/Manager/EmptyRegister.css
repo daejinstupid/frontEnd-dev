@@ -61,3 +61,18 @@
   height: 4rem;
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 480px) {
+
+
+.EmptyRegister-items {
+  background-color: rgba(254, 255, 240, 0.745);
+  border-radius: 10px;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-flow: column;
+  text-align: center; /* 아이템들을 가로 가운데 정렬합니다. */
+  justify-content: center;
+}
+}

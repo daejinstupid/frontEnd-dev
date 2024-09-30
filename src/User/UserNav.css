@@ -3,6 +3,7 @@
   src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
 }
 
+/* 상단 네비게이션 바 스타일 설정 */
 .user_nav {
   width: 100%;
   display: flex;
@@ -12,16 +13,23 @@
   opacity: 0.8;
   height: 130px;
   border-bottom: 1px solid black;
+  position: relative;
+  z-index: 1000;
 }
+
+/* 로고 이미지 스타일 */
 .header_img {
   width: 30%;
   margin: auto;
 }
+
 .header_img img {
   width: 50%;
   margin-left: 80px;
   padding-top: 10px;
 }
+
+/* 네비게이션 항목 스타일 */
 .user_nav_item {
   position: relative;
   width: 40%;
@@ -31,6 +39,8 @@
   height: 130px;
   margin-right: -150px;
 }
+
+/* 네비게이션 항목의 텍스트 스타일 */
 .user_nav_item h3 {
   color: black;
   height: 100%;
@@ -38,13 +48,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 130%;
+  font-size: 150%;
 }
+
+/* 링크 기본 스타일 설정 */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* 드롭다운 컨텐츠 (숨김 상태) */
 .user_dropdown_content {
   display: none;
   position: absolute;
@@ -57,25 +70,42 @@ a {
   width: 100%;
   text-align: center;
   margin-left: -10px;
+  z-index: 2000; /* 드롭다운 박스를 마이페이지보다 위에 표시 */
 }
+
+/* 마이페이지 섹션 z-index 설정 (드롭다운보다 낮게 설정) */
+.mypage {
+  z-index: 1000;
+}
+
+/* 드롭다운 호버 시 활성화 */
 .user_nav_item h3:hover {
   color: red;
 }
+
+/* 네비게이션 항목에 호버했을 때 드롭다운 보이도록 설정 */
 .user_nav_item:hover .user_dropdown_content {
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  top: 100;
+  top: 100%;
   left: 15%;
 }
+
+/* 드롭다운 텍스트 스타일 */
 .user_dropdown_content p {
   color: black;
   font-family: "HakgyoansimSantteutdotumL";
+  font-size: 120%;
 }
+
+/* 드롭다운 항목 호버 시 굵게 표시 */
 .user_dropdown_content p:hover {
   font-weight: bold;
 }
+
+/* 상단 오른쪽 사용자 정보와 로그아웃 버튼 영역 */
 .header_right {
   width: 30%;
   display: flex;
@@ -85,11 +115,13 @@ a {
   margin-right: 100px;
 }
 
+/* 사용자 이름 스타일 */
 .userNameDiv {
   font-family: "HakgyoansimSantteutdotumL";
   font-size: 1.3rem;
 }
 
+/* 로그아웃 버튼 스타일 */
 .logoutButton {
   margin-left: 0.5rem;
   font-family: "HakgyoansimSantteutdotumL";
@@ -97,11 +129,138 @@ a {
   height: 2rem;
 }
 
-.logoutButton hover {
+/* 로그아웃 버튼 호버 시 배경색 변경 */
+.logoutButton:hover {
   background-color: #ffcd4a;
 }
 
+/* 로그인 후 상단 메뉴 스타일 */
 .loginafterbox {
   display: flex;
   align-items: center;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 1200px 이하일 때 */
+@media screen and (max-width: 1200px) {
+  .user_nav_item h3 {
+    font-size: 2vw; /* 글자 크기를 화면 너비에 따라 유동적으로 조정 */
+  }
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 1024px 이하일 때 */
+@media screen and (max-width: 1024px) {
+  .user_nav_item h3 {
+    font-size: 1.8vw; /* 글자 크기를 화면 너비에 따라 조정 */
+  }
+
+  .header_img img {
+    width: 70%; /* 로고 크기를 화면 너비에 맞춰 조정 */
+    margin-left: 0;
+  }
+
+  .header_right {
+    margin-right: 50px; /* 우측 여백 조정 */
+  }
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .user_nav {
+    flex-direction: column; /* 세로로 정렬 */
+    height: auto; /* 높이 자동 조정 */
+  }
+
+  .header_img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_img img {
+    width: 60%; /* 로고 크기를 더 줄임 */
+    margin-left: 0;
+  }
+
+  .user_nav_item {
+    width: 100%;
+    margin: 10px 0; /* 항목 간격 설정 */
+    height: 30px; /* 항목 높이 축소 */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 항목을 중앙 정렬 */
+  }
+
+  .user_nav_item h3 {
+    font-size: 1.5vw; /* 글자 크기 상대적으로 조정 */
+  }
+
+  .user_dropdown_content {
+    width: 100%; /* 드롭다운 너비 */
+    left: 0;
+  }
+
+  .header_right {
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .userNameDiv {
+    font-size: 1.1rem;
+  }
+
+  .logoutButton {
+    height: 2.5rem; /* 로그아웃 버튼 크기 조정 */
+    font-size: 1rem;
+  }
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .user_nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header_img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_img img {
+    width: 50%;
+    margin-left: 0;
+  }
+
+  .user_nav_item {
+    width: 100%;
+    margin: 20px 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user_nav_item h3 {
+    font-size: 4vw; /* 글자 크기 더 크게 설정 */
+  }
+
+  .user_dropdown_content {
+    width: 100%;
+    left: 0;
+  }
+
+  .header_right {
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .userNameDiv {
+    font-size: 1rem; /* 폰트 크기 조정 */
+  }
+
+  .logoutButton {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
 }

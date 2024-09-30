@@ -71,7 +71,6 @@ const CafeRegister = () => {
           icon: "warning",
           title: "",
           text: `카페이름은 1글자 이상 입력해야 합니다..`,
-
           confirmButton: true,
           confirmButtonText: "확인",
           confirmButtonColor: "#FFCD4A",
@@ -181,7 +180,7 @@ const CafeRegister = () => {
         Swal.fire({
           icon: "warning",
           title: "",
-          text: `대표 사진과 상세 사진을 모두 업로드해주세요..`,
+          text: `대표 사진과 상세 사진 모두 업로드해주세요.`,
 
           confirmButton: true,
           confirmButtonText: "확인",

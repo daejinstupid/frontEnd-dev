@@ -4,6 +4,7 @@
   flex-direction: column;
   margin: auto;
 }
+
 .noreserv {
   margin: auto;
 }
@@ -44,6 +45,43 @@
   font-size: 2rem;
   width: 100%;
 }
+
 .no-reserve-main-content p span {
   padding-top: 50px;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 적용 */
+@media screen and (max-width: 768px) {
+  .x {
+    width: 180px;  /* x 마크의 너비를 줄여 모바일 화면에 맞춤 */
+    height: 180px; /* 높이도 줄임 */
+    font-size: 7rem;  /* 폰트 크기를 작게 조정 */
+    margin-top: -20px;  /* 상단 여백 조정 */
+  }
+
+  .noreserv {
+    height: 20rem;  /* 높이를 줄여 모바일에서 더 적합하게 */
+  }
+
+  .no-reserve-main-content {
+    font-size: 1.5rem;  /* 폰트 크기를 줄여 작은 화면에 맞춤 */
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .x {
+    width: 120px;  /* x 마크의 크기를 더 작게 */
+    height: 120px;
+    font-size: 5rem;  /* 폰트 크기를 더 줄임 */
+    margin-top: -10px;  /* 상단 여백 조정 */
+  }
+
+  .noreserv {
+    height: 15rem;  /* 더 작은 화면에 맞게 높이 조정 */
+  }
+
+  .no-reserve-main-content {
+    font-size: 1.2rem;  /* 폰트 크기를 더 작게 조정 */
+  }
 }

@@ -4,9 +4,11 @@
   height: 100vh;
   margin-right: -5%;
 }
+
 .map_nav {
   width: 100%;
 }
+
 .map_button {
   position: fixed;
   display: flex;
@@ -20,6 +22,7 @@
   text-align: center;
   z-index: 1;
 }
+
 .map_button .map_button1 {
   height: 40px;
   border: none;
@@ -30,16 +33,19 @@
   font-weight: normal;
   font-size: 16px;
 }
+
 .map_button .map_button2 {
   border-radius: 100px;
   width: 50px;
   height: 50px;
   background-color: #e8e8e8;
 }
+
 .map_button .map_button2 img {
   width: 25px;
   margin: auto;
 }
+
 .searchnav {
   position: fixed;
   background-color: white;
@@ -50,6 +56,7 @@
   font-size: 80%;
   box-shadow: 5px;
 }
+
 .searchnav-right {
   position: absolute;
   background-color: white;
@@ -61,16 +68,19 @@
   text-align: start;
   z-index: 1;
 }
+
 .searchnav_to_home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 35px auto;
 }
+
 .searchnav_to_home img {
   width: 30%;
   margin: auto;
 }
+
 .searchnav h5 {
   flex: 1;
   display: flex;
@@ -83,55 +93,33 @@
 .searchnav h5:hover {
   color: #ffcd4a;
 }
+
 .searchtest {
   position: relative;
   width: 20%;
   flex: 1;
 }
-.searchnav_map img {
-  width: 30%;
-  margin: auto;
-}
-.searchnav_time img {
-  width: 30%;
-  margin: auto;
-}
-.searchnav_mypage img {
-  width: 30%;
-  margin: auto;
-}
+
+.searchnav_map img,
+.searchnav_time img,
+.searchnav_mypage img,
 .searchnav_calendar img {
   width: 30%;
   margin: auto;
 }
-.searchnav_map {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 35px auto;
-}
-.searchnav_time a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 35px auto;
-  color: black;
-}
-.searchnav_mypage a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: black;
-  margin: 35px auto;
-}
+
+.searchnav_map,
+.searchnav_time a,
+.searchnav_mypage a,
 .searchnav_calendar a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: black;
   margin: 35px auto;
+  color: black;
 }
-/* 마커 css */
+
+/* 마커 CSS */
 .wrap {
   position: absolute;
   left: 0;
@@ -145,10 +133,12 @@
   font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
   line-height: 1.5;
 }
+
 .wrap * {
   padding: 0;
   margin: 0;
 }
+
 .wrap .info {
   width: 286px;
   height: 120px;
@@ -158,10 +148,12 @@
   overflow: hidden;
   background: #fff;
 }
+
 .wrap .info:nth-child(1) {
   border: 0;
   box-shadow: 0px 1px 2px #888;
 }
+
 .info .title {
   padding: 5px 0 0 10px;
   height: 30px;
@@ -170,6 +162,7 @@
   font-size: 18px;
   font-weight: bold;
 }
+
 .info .close {
   position: absolute;
   top: 10px;
@@ -179,28 +172,34 @@
   height: 17px;
   background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png");
 }
+
 .info .close:hover {
   cursor: pointer;
 }
+
 .info .body {
   position: relative;
   overflow: hidden;
 }
+
 .info .desc {
   position: relative;
   margin: 13px 0 0 90px;
   height: 75px;
 }
+
 .desc .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .desc .jibun {
   font-size: 11px;
   color: #888;
   margin-top: -2px;
 }
+
 .info .img {
   position: absolute;
   top: 6px;
@@ -211,6 +210,7 @@
   color: #888;
   overflow: hidden;
 }
+
 .info:after {
   content: "";
   position: absolute;
@@ -221,6 +221,76 @@
   height: 12px;
   background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
 }
+
 .info .link {
   color: #5085bb;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .map_button {
+    width: 70%; /* 버튼 너비 조정 */
+    left: 50%; /* 중앙 정렬 */
+  }
+
+  .map_button .map_button1 {
+    width: 120px; /* 버튼 크기 조정 */
+  }
+
+  .map_button .map_button2 {
+    width: 40px; /* 작은 버튼 크기 */
+    height: 40px;
+  }
+
+  .searchnav {
+    width: 10%; /* 네비게이션 너비 조정 */
+  }
+
+  .searchnav-right {
+    width: 30%; /* 오른쪽 네비게이션 너비 조정 */
+    left: 10%;
+  }
+
+  .wrap {
+    width: 250px; /* 마커 정보창 크기 조정 */
+    height: auto;
+  }
+
+  .wrap .info {
+    width: 248px;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .map_button {
+    width: 90%;
+    bottom: 20px;
+  }
+
+  .map_button .map_button1 {
+    width: 100px;
+  }
+
+  .map_button .map_button2 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .searchnav {
+    width: 15%;
+  }
+
+  .searchnav-right {
+    width: 35%;
+    left: 15%;
+  }
+
+  .wrap {
+    width: 220px;
+  }
+
+  .wrap .info {
+    width: 218px;
+  }
 }

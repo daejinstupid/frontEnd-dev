@@ -1,12 +1,10 @@
-
-.cafe-register-basic{
+.cafe-register-basic {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 1px solid #ccc;
   width: 40rem;
   margin-bottom: 1rem;
-  
 }
 
 .cafe-register-basic p {
@@ -16,24 +14,24 @@
   margin-bottom: 0.3rem;
 }
 
-.time-picker-div label{
+.time-picker-div label {
   margin-left: 2rem;
   margin-right: 2rem;
   font-size: 1.3rem;
 }
 
-.register-time-picker{
+.register-time-picker {
   width: 19rem;
   height: 1.5rem;
   font-size: 1.4rem !important;
   text-align: center;
 }
 
-.register-time-picker:last-child{
+.register-time-picker:last-child {
   margin-bottom: 1rem;
 }
 
-.register-addr button{
+.register-addr button {
   margin-left: 2rem;
   font-size: 1rem;
   padding: 0.8rem 1.5rem;
@@ -41,10 +39,9 @@
   margin-right: 2rem;
   border: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
 }
 
-.register-addr input, 
+.register-addr input,
 .register-addr-extra input,
 .register-tel input {
   margin-left: 2rem;
@@ -53,11 +50,88 @@
   color: black;
 }
 
-.register-addr input:last-child, 
-.register-addr-extra input:last-child, 
+.register-addr input:last-child,
+.register-addr-extra input:last-child,
 .register-tel input:last-child {
   margin-bottom: 2rem;
 }
-.error{
+
+.error {
   border: solid red;
+}
+
+@media screen and (max-width: 480px) {
+  .register-time-picker {
+    width: 90%; /* 모바일 화면에서 90% 너비 */
+    max-width: 300px; /* 최대 너비를 제한 */
+    height: 2.5rem; /* 모바일 높이 조정 */
+    font-size: 1.2rem; /* 모바일 폰트 크기 조정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+  }
+
+  .time-picker-div {
+    display: flex;
+    flex-direction: column; /* 세로 정렬로 변경 */
+    align-items: center; /* 중앙 정렬 */
+    margin-bottom: 1rem; /* 각 시간 선택 사이 여백 추가 */
+  }
+
+  .time-picker-div label {
+    font-size: 1rem; /* 모바일에서의 폰트 크기 조정 */
+  }
+
+  /* DatePicker의 dropdown 스타일 조정 */
+  .react-datepicker {
+    font-size: 1rem; /* 모바일에서의 폰트 크기 조정 */
+    max-width: 90vw; /* 화면 너비에 맞게 조정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+  }
+
+  .react-datepicker__time-list {
+    max-height: 50vh; /* 최대 높이 조정 */
+    overflow-y: auto; /* 세로 스크롤 가능 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+  }
+  .react-datepicker__time-list-item {
+    width: 100%; /* 전체 너비 사용 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+  .cafe-register-basic {
+    width: 100%; /* 모바일 화면에서 100% 너비 */
+    max-width: none; /* 최대 너비 제한 해제 */
+  }
+
+  .cafe-register-basic p {
+    font-size: 1.4rem; /* 모바일 폰트 크기 줄임 */
+  }
+
+  .time-picker-div {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 쌓이도록 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin: 0 2rem; /* 좌우 여백 추가 */
+  }
+
+  .time-picker-div label {
+    font-size: 1rem; /* 모바일 폰트 크기 줄임 */
+  }
+
+  .register-time-picker {
+    width: 90%; /* 모바일 화면에서 90% 너비 */
+    height: 2.2rem; /* 모바일 높이 조정 */
+  }
+
+  .register-addr input,
+  .register-addr-extra input,
+  .register-tel input {
+    width: 70%; /* 모바일 화면에서 90% 너비 */
+    height: 2.5rem; /* 모바일 높이 조정 */
+    font-size: 1rem; /* 모바일 폰트 크기 조정 */
+  }
+
+  .register-addr input {
+    font-size: 0.9rem; /* 주소 입력 필드의 폰트 크기 조정 */
+  }
 }

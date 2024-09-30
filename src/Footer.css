@@ -7,6 +7,7 @@
   align-items: center;
   border-top: solid #e6e6e6;
 }
+
 .footer_text {
   font-family: "SUITE-Bold";
   display: flex;
@@ -15,8 +16,43 @@
   font-size: 15px;
   margin-left: 10%;
 }
+
 footer img {
   width: 8%;
   text-align: end;
   margin-right: 10%;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .footer_text {
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px; /* 텍스트 크기 줄임 */
+    margin-bottom: 10px;
+  }
+
+  footer img {
+    width: 15%; /* 이미지 크기 확대 */
+    margin-right: 0;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .footer_text {
+    font-size: 12px; /* 텍스트 크기 더 축소 */
+  }
+
+  footer img {
+    width: 20%; /* 이미지 크기 더 확대 */
+  }
 }

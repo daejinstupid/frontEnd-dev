@@ -84,3 +84,13 @@
   padding: 20px;
   height: 38rem;
 }    
+
+@media screen and (max-width: 480px) {
+  .banner img {
+    width: 0%;
+  }
+  .status-tab-container {
+    width: 550%;
+    margin: auto;
+  }
+}

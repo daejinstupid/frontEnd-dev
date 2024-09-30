@@ -142,7 +142,7 @@ const handlePhoneNumberChange = (e) => {
           <div className='register-addr'>
             <input 
               type="text" 
-              placeholder="주소 찾기 버튼을 클릭해주세요"
+              placeholder="주소 찾기 버튼을 클릭"
               value={editAddressObj.townAddress}
               onChange={(e) => handleAddressChange(e, "townAddress")}
               disabled />

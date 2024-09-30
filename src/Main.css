@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@1&display=swap");
+
 @font-face {
   font-family: "LINESeedKR-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "Ropa Sans", sans-serif;
 }
 
 .test {
@@ -12,12 +17,11 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  background-attachment: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .test::after {
@@ -32,72 +36,99 @@
   z-index: 0;
 }
 
-.test {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .test_header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  align-items: center;
   text-align: center;
   z-index: 1;
   padding-top: 50px;
 }
+
 .test_header img {
   width: 30%;
-  margin: auto;
+  max-width: 400px;
+  height: auto;
 }
+
 .test_link {
   margin: auto;
-  width: 50%;
+  width: 100%; /* 부모 요소의 전체 너비를 사용 */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center; /* 가운데 정렬 */
   margin-top: -200px;
   z-index: 1;
 }
-.link_manager {
-  opacity: 0.8;
-  width: 30%;
-  height: 50px;
-  text-align: center;
-  background-color: white;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-right: 160px;
-  border-radius: 40px;
-}
+
+.link_manager,
 .link_user {
   opacity: 0.8;
-
-  width: 30%;
-  height: 50px;
+  width: 80%; /* 넓이를 80%로 줄임 */
+  max-width: 300px; /* 최대 넓이를 300px로 제한 */
+  height: 50px; /* 높이를 50px로 조정 */
   text-align: center;
   background-color: #ffffff;
-  margin: auto;
+  margin: 10px 0; /* 상하로 간격 추가 */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  border-radius: 40px;
+  justify-content: center;
+  border-radius: 30px;
 }
-.link_manager a {
-  color: black;
-  font-size: 150%;
-  margin: auto;
-  /* font-weight: bold; */
-  font-family: "Ropa Sans", sans-serif;
-}
+
+.link_manager a,
 .link_user a {
   color: black;
-  font-size: 150%;
+  font-size: 110%; /* 글자 크기를 110%로 줄임 */
   margin: auto;
-  /* font-weight: bold; */
-  font-family: "Ropa Sans", sans-serif;
+}
+
+/* 반응형 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .test_header img {
+    width: 70%;
+  }
+
+  .test_link {
+    width: 100%;
+  }
+
+  .link_manager,
+  .link_user {
+    width: 90%;
+    height: 45px;
+  }
+
+  .link_manager a,
+  .link_user a {
+    font-size: 100%;
+  }
+}
+
+/* 430x932 해상도에 맞춘 반응형 설정 */
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .test_header img {
+    width: 80%;
+  }
+
+  .test_link {
+    width: 100%;
+    flex-direction: column;
+    margin-top: -150px;
+  }
+
+  .link_manager,
+  .link_user {
+    width: 90%;
+    max-width: 250px; /* 최대 넓이를 250px로 제한 */
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .link_manager a,
+  .link_user a {
+    font-size: 90%;
+  }
 }

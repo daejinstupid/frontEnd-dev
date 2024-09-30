@@ -27,3 +27,31 @@
   width: 40rem;
   height: 5rem;
 }
+
+@media screen and (max-width: 480px) {
+  .cafe-name-inputbox {
+    font-family: "HakgyoansimSantteutdotumL";
+    width: 20rem;
+    border: 1px solid #ccc;;
+    height: 4rem;
+    color: black;
+    font-size: 1.8rem;
+  }
+  .cafe-name-title-container {
+    width: 100%; /* 모바일에서 100%로 설정 */
+    padding: 0 1rem; /* 양쪽 여백 추가 */
+  }
+  .cafe-name-title {
+    width: 100%; /* 모바일에서 100%로 설정 */
+    height: auto; /* 자동 높이로 설정 */
+  }
+
+  .cafe-register-title {
+    width: 20rem;
+    height: 5rem;
+  }
+  .cafe-register-title p {
+    font-size : 2rem;
+  }
+  
+}

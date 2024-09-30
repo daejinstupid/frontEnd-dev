@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .App-logo {
+    height: 30vmin; /* 로고 크기 축소 */
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); /* 텍스트 크기 줄임 */
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .App-logo {
+    height: 25vmin; /* 더 작은 로고 크기 */
+  }
+
+  .App-header {
+    font-size: calc(6px + 2vmin); /* 텍스트 크기 더 축소 */
+  }
+}

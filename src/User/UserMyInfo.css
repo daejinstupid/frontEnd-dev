@@ -75,3 +75,112 @@
   border-radius: 10px;
   background-color: #ffcd4a;
 }
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .myUserInfo-container {
+    width: 90%; /* 모바일 화면에서는 너비를 90%로 조정 */
+    height: auto; /* 높이를 자동으로 조정 */
+  }
+
+  .myUserInfo-title p {
+    font-size: 30px; /* 제목 글자 크기 조정 */
+  }
+
+  .myUserInfo-container hr {
+    width: 50%; /* hr 너비 조정 */
+  }
+
+  .myUserInfo-inform {
+    font-size: 25px; /* 글자 크기 조정 */
+  }
+
+  .myUserInfo-input {
+    font-size: 20px; /* 입력 폰트 크기 조정 */
+    margin-bottom: 20px;
+  }
+
+  .myUserInfo-input input {
+    font-size: 20px; /* 입력 필드 글자 크기 조정 */
+    padding: 0.4rem;
+  }
+
+  .myUserInfo-button button {
+    width: 130px; /* 버튼 크기 조정 */
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .myUserInfo-container {
+    width: 100%; /* 화면 너비에 맞추어 100%로 조정 */
+  }
+
+  .myUserInfo-title p {
+    font-size: 25px; /* 제목 글자 크기 더 작게 조정 */
+  }
+
+  .myUserInfo-container hr {
+    width: 70%; /* hr 너비 조정 */
+  }
+
+  .myUserInfo-inform {
+    font-size: 20px; /* 글자 크기 조정 */
+  }
+
+  .myUserInfo-input {
+    font-size: 18px;
+  }
+
+  .myUserInfo-input input {
+    font-size: 18px; /* 입력 필드 글자 크기 조정 */
+    padding: 0.3rem;
+  }
+
+  .myUserInfo-button button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* 아이폰 14 Pro Max 크기(430x932)에 대한 미디어 쿼리 */
+@media screen and (max-width: 430px) {
+  .myUserInfo-container {
+    width: 95%; /* 너비를 거의 전체 화면에 맞춤 */
+    height: auto; /* 높이를 자동으로 설정 */
+  }
+
+  .myUserInfo-title p {
+    font-size: 22px; /* 제목 크기를 더 줄임 */
+  }
+
+  .myUserInfo-container hr {
+    width: 80%; /* hr 태그의 너비를 더 넓게 조정 */
+    margin-bottom: 30px; /* 하단 간격 줄이기 */
+  }
+
+  .myUserInfo-inform {
+    font-size: 18px; /* 정보 텍스트 크기를 더 줄임 */
+    line-height: 1.2; /* 줄 간격을 줄임 */
+  }
+
+  .myUserInfo-input {
+    font-size: 16px; /* 입력 라벨 크기 줄임 */
+    margin-bottom: 15px;
+  }
+
+  .myUserInfo-input input {
+    font-size: 18px; /* 입력 필드 글자 크기 줄임 */
+    padding: 0.3rem;
+  }
+
+  .myUserInfo-button button {
+    width: 110px; /* 버튼 크기를 더 줄임 */
+    height: 40px;
+    font-size: 16px; /* 버튼 글자 크기 줄임 */
+  }
+}
+
+}

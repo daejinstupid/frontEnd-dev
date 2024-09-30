@@ -4,11 +4,11 @@
 }
 
 .login {
-  background-image: url(./img/register-background.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
+  background-image: url(./img/ez.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .login-container {
@@ -23,40 +23,37 @@
 .login-title {
   color: white;
   display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    position: absolute; /* 또는 relative, 상황에 따라 다름 */
-  top: 130px; /* 상단에서부터의 거리, 상황에 맞게 조절 */
-  left: 50%; /* 가운데 정렬을 위한 설정 */
-  transform: translateX(-50%); /* 정확한 가운데 정렬을 위한 설정 */
+  flex-direction: column;
+  font-size: 2rem;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "HakgyoansimSantteutdotumL";
-  
 }
 
 .login-box {
   display: flex;
-    position: absolute;
-    top: 210px;
-    width: 27rem;
-    height: 24.4rem;
-    background-color: #f5f5f5;
-    padding: 1.5rem;
-    display: flex;
-    opacity: 0.97;
-    flex-direction: column;
-    
-    /* 그림자 효과 추가 */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* X축 오프셋, Y축 오프셋, 흐림 반경, 색상 */
-  transition: box-shadow 0.3s ease-in-out; /* 그림자 효과에 애니메이션을 적용합니다. */
+  position: absolute;
+  top: 210px;
+  width: 27rem;
+  height: 24.4rem;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  display: flex;
+  opacity: 0.97;
+  flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .login-intro {
   font-family: "HakgyoansimSantteutdotumL";
   font-size: 1.3rem;
-    color: black;
-    font-weight: 150;
-    margin-bottom: 0.5rem;
-    margin-left: 4.5rem;
+  color: black;
+  font-weight: 150;
+  margin-bottom: 0.5rem;
+  margin-left: 4.5rem;
 }
 
 .login-inputs {
@@ -76,32 +73,17 @@
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.id {
+.id, .pw {
   font-family: "HakgyoansimSantteutdotumL";
   margin-bottom: 1rem;
   margin-left: 0.4rem;
 }
 
-.pw {
-  font-family: "HakgyoansimSantteutdotumL";
-  margin-bottom: 1rem;
-  margin-left: 0.4rem;
-}
-
-.id-box {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-}
-
-.pw-box {
+.id-box, .pw-box {
   color: black;
   display: flex;
   flex-direction: column;
 }
-
 
 .login-button {
   width: 7rem;
@@ -130,4 +112,71 @@
   margin-left: 1rem;
   color: black;
   text-decoration: underline;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .login-box {
+    width: 22rem;
+    height: auto;
+    padding: 1rem;
+    top: 180px; /* 로그인 박스 위치 조정 */
+  }
+
+  .login-title {
+    font-size: 1.5rem; /* 타이틀 폰트 크기 축소 */
+    top: 100px;
+  }
+
+  .login-inputs {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .login-box input {
+    padding: 0.8rem; /* 입력 필드 크기 축소 */
+    font-size: 0.9rem;
+  }
+
+  .login-button {
+    width: 6rem; /* 로그인 버튼 크기 축소 */
+    margin-left: 8.5rem; /* 중앙 정렬 조정 */
+  }
+
+  .go-register-section {
+    margin-left: 3rem;
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .login-box {
+    width: 18rem;
+    padding: 0.8rem;
+    top: 160px;
+  }
+
+  .login-title {
+    font-size: 1.2rem; /* 더 작은 화면에서 타이틀 크기 축소 */
+    top: 80px;
+  }
+
+  .login-inputs {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .login-box input {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .login-button {
+    width: 5.5rem;
+    margin-left: 6.5rem;
+  }
+
+  .go-register-section {
+    margin-left: 2rem;
+  }
 }

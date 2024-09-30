@@ -52,3 +52,12 @@ hr {
   border-color: black;
 }
 
+@media screen and (max-width: 480px) {
+  .cafe-register-title p {
+    font-size: 1.5rem; /* 글씨 크기를 줄임 */
+  }
+
+  .cafe-register-content {
+    font-size: 1.2rem; /* 내용 글씨 크기도 줄임 */
+  }
+}

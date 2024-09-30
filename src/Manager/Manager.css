@@ -2,52 +2,80 @@
   font-family: "HakgyoansimSantteutdotumL";
   src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
 }
+
 .manager_index {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 120vh;
-  
+  height: 130vh; /* 높이 증가 */
 }
+
 .manager_index_text {
-  
+  position: relative;
   font-family: "HakgyoansimSantteutdotumL";
-  background-image: url(./../img/cafeindexbg.png); 
-  opacity: 0.7;
+  background-image: url("./../img/first BackGround.jpg"); /* 초기 배경 이미지 */
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
-
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center;
   width: 100%;
   height: 50vh;
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   padding-bottom: 50px;
-  color: white;
   font-weight: bold;
+  overflow: hidden; /* 자식 요소가 부모 요소를 넘지 않도록 설정 */
+  transition: background-image 1s ease, opacity 1s ease; /* 배경 이미지 및 텍스트 전환 */
+}
+
+.manager_index_text.show {
+  background-image: url("./../img/After img.png"); /* 새 배경 이미지 */
+}
+
+.manager_index_text h1, 
+.manager_index_text p {
+  color: black; /* 텍스트 색상 검은색으로 변경 */
+  opacity: 0; /* 초기 상태에서 텍스트는 숨겨짐 */
+  transition: opacity 1s ease; /* 텍스트 애니메이션 추가 */
+}
+
+.manager_index_text.show h1, 
+.manager_index_text.show p {
+  opacity: 1; /* 애니메이션 후 텍스트가 나타나도록 설정 */
 }
 
 .manager_index_text h1 {
   font-size: 500%;
   font-style: italic;
-  font-family: "HakgyoansimSantteutdotumL";
-  color: white;
-  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9); /* X축 2px, Y축 2px, 흐림 반경 4px, 반투명 검정색 */
+  margin-bottom: 0.5rem; /* h1과 p 간격 */
 }
 
 .manager_index_text p {
-  font-size: 150%;
+  font-size: 115%;
+}
+
+.advantages_section {
+  width: 100%;
+  background-color: white; /* 배경색 흰색으로 설정 */
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.advantages_section h2 {
   font-family: "HakgyoansimSantteutdotumL";
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 큰 그림자 효과 */
+  font-size: 200%;
+  color: black; /* 텍스트 색상 검은색으로 설정 */
+}
+
+.additional_info p {
+  font-family: "HakgyoansimSantteutdotumL";
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .manager_index_img {
@@ -56,9 +84,122 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: auto;
   margin-bottom: 10rem;
 }
-.manager_index_img img {
+
+.image-container {
+  position: relative;
   width: 20%;
+  overflow: hidden; /* 자식 요소가 부모 요소를 넘지 않도록 설정 */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease; /* 이미지 흐림 애니메이션 추가 */
+}
+
+.image-container:hover img {
+  opacity: 0.15; /* 마우스 오버 시 이미지 흐릿하게 */
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: black;
+  font-size: 150%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.57);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 1; /* 기본적으로 보이도록 설정 */
+  transition: opacity 0.3s ease; /* 캡션 애니메이션 추가 */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 120%;
+  text-align: center;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.0);
+  padding: 1px;
+  border-radius: 8px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  width: 100%;
+  max-width: 500px;
+  word-spacing: 1px;
+  transition: opacity 0.3s ease; /* 텍스트 애니메이션 추가 */
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1; /* 마우스 오버 시 텍스트 표시 */
+}
+
+.image-container:hover .caption {
+  opacity: 0; /* 마우스 오버 시 캡션 숨기기 */
+}
+
+/* 여기서부터 반응형 설정 */
+
+
+/* 태블릿 및 작은 화면 (1024px 이하) */
+@media (max-width: 1024px) {
+  .manager_index_text h1 {
+    font-size: 8vw; /* 화면 너비의 8%로 조정 */
+  }
+
+  .manager_index_text p {
+    font-size: 3vw; /* 화면 너비의 3%로 조정 */
+  }
+
+  .advantages_section h2 {
+    font-size: 5vw; /* 화면 너비의 5%로 조정 */
+  }
+
+  .additional_info p {
+    font-size: 2.5vw; /* 화면 너비의 2.5%로 조정 */
+  }
+
+  .caption {
+    font-size: 4vw; /* 화면 너비의 4%로 조정 */
+  }
+
+  .overlay-text {
+    font-size: 3vw; /* 화면 너비의 3%로 조정 */
+  }
+}
+
+/* 모바일 화면 (768px 이하) */
+@media (max-width: 768px) {
+  .manager_index_img {
+    flex-direction: column; /* 이미지 세로 배열 */
+    height: auto; /* 높이 자동 조정 */
+  }
+
+  .image-container {
+    width: 90%; /* 이미지 너비 90%로 조정 */
+    margin: 20px auto; /* 가운데 정렬 및 간격 추가 */
+  }
+}
+
+/* 아주 작은 모바일 화면 (480px 이하) */
+@media (max-width: 480px) {
+  .manager_index_text h1 {
+    font-size: 10vw; /* 더 작은 화면에서는 텍스트 크기 조정 */
+  }
+
+  .manager_index_text p {
+    font-size: 4vw;
+  }
+
+  .image-container {
+    width: 100%; /* 이미지 너비 100%로 조정 */
+  }
 }

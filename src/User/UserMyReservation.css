@@ -7,11 +7,13 @@
   width: 100%;
   margin: 50px auto 0;
 }
+
 .status-tab-container_user {
   margin: auto;
   margin-right: 150px;
   width: 70%;
 }
+
 .myReservation-title p {
   font-weight: bold;
   font-size: 30px;
@@ -19,6 +21,7 @@
   margin-top: 50px;
   text-align: center;
 }
+
 .user_reservation-status-title {
   font-weight: bold;
   font-size: 40px;
@@ -27,13 +30,16 @@
   text-align: center;
   margin-right: 20px;
 }
+
 .user_reservation-status-top {
   margin-left: 150px;
 }
+
 .myReservation-title hr {
   margin-bottom: 50px;
   width: 20%;
 }
+
 .user_tab-buttons {
   margin-top: 50px;
   margin-left: 150px;
@@ -58,7 +64,124 @@
   margin-left: 120px;
   margin-right: -50px;
 }
+
 .user_myReservation-container .pagination {
   margin-left: 700px;
   margin-right: -700px;
+}
+
+/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .status-tab-container_user {
+    margin-right: 0;
+    width: 90%; /* 더 작은 화면에서 너비 조정 */
+  }
+
+  .myReservation-title p {
+    font-size: 24px; /* 글자 크기 줄임 */
+  }
+
+  .user_reservation-status-title {
+    font-size: 30px; /* 상태 제목 글자 크기 조정 */
+    margin-right: 0;
+  }
+
+  .user_reservation-status-top,
+  .user_tab-buttons {
+    margin-left: 0; /* 여백 제거 */
+  }
+
+  .myReservation-title hr {
+    width: 50%; /* hr 너비를 더 넓게 조정 */
+  }
+
+  .test_img {
+    width: 100%; /* 이미지 레이아웃을 화면에 맞춤 */
+    margin-left: 0;
+    flex-direction: column; /* 이미지를 수직으로 정렬 */
+    align-items: center;
+  }
+
+  .test_img_img {
+    width: 80%; /* 이미지 크기 조정 */
+    height: auto; /* 높이를 자동으로 설정 */
+    margin: 0; /* 여백을 제거하여 중앙 정렬 */
+  }
+
+  .user_myReservation-container .pagination {
+    margin-left: 0;
+    margin-right: 0; /* 페이지네이션 여백을 조정 */
+    text-align: center; /* 중앙 정렬 */
+  }
+}
+
+/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .myReservation-title p {
+    font-size: 18px; /* 더 작은 화면에서 글자 크기 더 줄임 */
+  }
+
+  .user_reservation-status-title {
+    font-size: 24px; /* 글자 크기 더 작게 조정 */
+  }
+
+  .myReservation-title hr {
+    width: 70%; /* hr 너비를 더 넓게 조정 */
+  }
+
+  .test_img_img {
+    width: 100%; /* 이미지를 화면 전체에 맞게 */
+  }
+
+  .user_myReservation-container .pagination {
+    font-size: 14px; /* 페이지네이션의 글자 크기 조정 */
+  }
+}
+
+/* 아이폰 14 Pro Max 해상도(430x932)에 맞춘 스타일 */
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .status-tab-container_user {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .myReservation-title p {
+    font-size: 20px; /* 타이틀 크기 조정 */
+  }
+
+  .user_reservation-status-title {
+    font-size: 28px; /* 상태 제목 크기 조정 */
+    margin-right: 0;
+  }
+
+  .user_reservation-status-top {
+    margin-left: 0;
+  }
+
+  .user_tab-buttons {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 20px; /* 버튼과 이미지 사이에 여백 추가 */
+  }
+  
+  .test_img {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    align-items: center;
+    margin-top: 20px; /* 추가로 이미지 위쪽에 여백 */
+  }
+  
+
+  .test_img_img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .user_myReservation-container .pagination {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
 }

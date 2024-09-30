@@ -9,26 +9,26 @@
   align-items: center;
   justify-content: space-around;
   padding: 30px;
-  width: 170%;
+  width: 100%; /* 아이폰 크기에 맞게 조정 */
   font-family: "HakgyoansimSantteutdotumL";
   height: 80px;
   border: 1px solid black;
   margin: 20px auto;
   border-radius: 10px;
 }
+
 .user_reservation-item_after {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   padding: 30px;
-  width: 170%;
+  width: 100%; /* 아이폰 크기에 맞게 조정 */
   font-family: "HakgyoansimSantteutdotumL";
   height: 80px;
   border: 1px solid black;
   margin: 20px auto;
   border-radius: 10px;
-  margin-right: -40px;
 }
 
 .divider {
@@ -48,10 +48,8 @@
   font-weight: bold;
   font-size: 25px;
   padding: 10px;
-  margin-left: -190px;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: -7px;
 }
 
 .user_inprogress-info {
@@ -60,45 +58,45 @@
   flex-direction: column;
   text-align: left;
   font-size: 20px;
-  margin-right: 150px;
-  padding-right: 150px;
-  margin-left: -110px;
+  margin-right: 10px; /* 마진을 줄여서 작은 화면에서 조정 */
+  padding-right: 10px;
+  margin-left: 0;
 }
+
 .user_inprogress-info div {
   margin-top: 5px;
-  margin-right: 50px;
 }
+
 .user_reservation_finish {
   margin-left: 5px;
-  margin-right: -40px;
   width: 75px;
 }
+
 .user_reservation_finish h4 {
   font-size: 150%;
   width: 100%;
   margin-top: 10px;
 }
+
 .user_reservation_cancle {
-  margin-right: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 80px;
-  margin-right: -25px;
 }
+
 .user_reservation_cancle h4 {
   font-size: 150%;
   width: 100%;
   margin-top: 20px;
-  height: 10px;
 }
+
 .user_reservation_cancle button {
   width: 100%;
   height: 30px;
   font-weight: bold;
   background-color: #ccc;
-  margin-bottom: 40px;
 }
 
 .user_reservation_no_exist {
@@ -115,7 +113,6 @@
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin-left: -100px;
 }
 
 .user_reservation_cafe_img_after img {
@@ -130,10 +127,77 @@
   text-align: center;
   margin: 11rem;
 }
-.user_reservation_loading {
-  font-size: 1.4rem;
-  color: #a4a4a4;
-  text-align: center;
-  margin: 11rem;
-  margin-right: -180px;
+
+/* 768px 이하: 태블릿과 작은 화면에 맞게 조정 */
+@media screen and (max-width: 768px) {
+  .user_reservation-item,
+  .user_reservation-item_after {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column; /* 수직 정렬 */
+  }
+
+  .user_cafe_name {
+    font-size: 20px;
+  }
+
+  .user_inprogress-info {
+    font-size: 16px;
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .user_reservation_finish,
+  .user_reservation_cancle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .user_reservation_finish h4,
+  .user_reservation_cancle h4 {
+    font-size: 120%;
+  }
+
+  .user_reservation_cafe_img_after {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user_reservation_loading {
+    margin: 8rem;
+  }
+}
+
+/* 480px 이하: 아이폰 14 Pro Max 크기에 맞춤 */
+@media screen and (max-width: 480px) {
+  .user_reservation-item,
+  .user_reservation-item_after {
+    padding: 15px;
+    height: auto;
+  }
+
+  .user_cafe_name {
+    font-size: 18px; /* 더 작은 화면에 맞게 글자 크기 줄임 */
+  }
+
+  .user_inprogress-info {
+    font-size: 14px;
+  }
+
+  .user_reservation_finish h4,
+  .user_reservation_cancle h4 {
+    font-size: 110%; /* 폰트 크기 더 작게 */
+  }
+
+  .user_reservation_cafe_img_after {
+    width: 70px;
+    height: 70px;
+  }
+
+  .user_reservation_loading {
+    font-size: 1.2rem;
+    margin: 6rem;
+  }
+
 }

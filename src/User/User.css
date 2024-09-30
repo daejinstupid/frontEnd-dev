@@ -2,36 +2,47 @@
   font-family: "HakgyoansimSantteutdotumL";
   src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
 }
+
 .user_index {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
+
 .user_index_text {
   font-family: "HakgyoansimSantteutdotumL";
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* margin: 50px auto; */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
+
 .user_index_text h1 {
   font-family: "HakgyoansimSantteutdotumL";
   font-size: 500%;
   font-style: italic;
 }
-.user_index_section1_text p {
-  font-family: "HakgyoansimSantteutdotumL";
-  font-size: 200%;
-}
+
 .user_index_section1 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
+
 .user_index_section1 img {
   width: 50%;
   height: 400px;
 }
+
 .user_index_section1_text {
   width: 50%;
   text-align: center;
@@ -40,12 +51,17 @@
   font-family: "HakgyoansimSantteutdotumL";
   justify-content: center;
 }
+
 .user_index_section2 {
   width: 100%;
   display: flex;
-  font-family: "HakgyoansimSantteutdotumL";
   flex-direction: row;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.8s;
 }
+
 .user_index_section2_text {
   width: 50%;
   text-align: center;
@@ -56,6 +72,63 @@
 
 .user_index_section2 img {
   height: 400px;
-
   width: 50%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 미디어 쿼리 적용: 화면 크기가 768px 이하일 때 적용 (태블릿 및 모바일 환경) */
+@media screen and (max-width: 768px) {
+  .user_index_text h1 {
+    font-size: 200%; /* 제목 크기를 줄임 */
+  }
+
+  .user_index_section1, .user_index_section2 {
+    flex-direction: column; /* 모바일에서는 수직 정렬로 변경 */
+  }
+
+  .user_index_section1 img, .user_index_section2 img {
+    width: 100%; /* 이미지를 화면에 꽉 차게 */
+    height: auto; /* 높이를 자동 조정 */
+  }
+
+  .user_index_section1_text, .user_index_section2_text {
+    width: 100%; /* 텍스트도 100% 너비 */
+    padding: 20px; /* 패딩 추가로 텍스트가 화면과 밀착되지 않도록 */
+  }
+}
+
+/* 아이폰 14 Pro Max 크기인 430x932 화면을 위한 추가 미디어 쿼리 */
+@media screen and (max-width: 430px) {
+  .user_index_text h1 {
+    font-size: 150%; /* 제목 크기를 더 줄임 */
+  }
+
+  .user_index_section1, .user_index_section2 {
+    flex-direction: column;
+  }
+
+  .user_index_section1 img, .user_index_section2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .user_index_section1_text, .user_index_section2_text {
+    width: 100%;
+    padding: 15px; /* 텍스트 패딩 조정 */
+    font-size: 90%; /* 글씨 크기를 약간 줄임 */
+  }
+
+  .user_index_text h1 {
+    font-size: 300%; /* 헤더 텍스트 크기를 더 작게 */
+  }
 }

@@ -67,3 +67,43 @@
   border-radius: 10px;
   font-size: 1.2rem;
 }
+
+/* 모바일 화면 (480px 이하)에서의 스타일 */
+@media (max-width: 480px) {
+  .study-setting-div {
+    flex-direction: column; /* 세로로 배치 */
+    width: 100%; /* 모바일에서는 100% 너비 */
+    margin-bottom: 1rem;
+  }
+
+  .study-setting-div p {
+    margin-left: 0; /* 여백 제거 */
+    font-size: 1.2rem; /* 폰트 크기 축소 */
+    text-align: center;
+  }
+
+  .study-setting-floorplan {
+    width: 80%; /* 너비를 100%로 확장 */
+    margin-right: 0;
+    margin-bottom: 1rem; /* 아래에 여백 추가 */
+  }
+
+  .study-setting-radio {
+    flex-direction: column; /* 라디오 버튼 세로 정렬 */
+    align-items: flex-start;
+  }
+
+  .study-setting-radio div {
+    padding: 0.5rem 0; /* 상하 패딩 축소 */
+  }
+
+  .study-setting-radio label {
+    font-size: 1.2rem; /* 라벨 폰트 크기 축소 */
+  }
+
+  .cafe-final-register {
+    width: 100%; /* 버튼을 전체 너비로 확장 */
+    height: 3rem;
+    font-size: 1rem; /* 폰트 크기 축소 */
+  }
+}

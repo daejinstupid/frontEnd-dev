@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="footer">
         <div className="footer_text">
           <p>
-            ∙ 사업자명 : 오합지졸 ∙ 사업자번호 : 111-11-11111 ∙ 직업정보
+            ∙ 사업자명 : 스파크 ∙ 사업자번호 : 111-11-11111 ∙ 직업정보
             제공사업 신고번호 : J1122334455667
           </p>
           <p>

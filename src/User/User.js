@@ -1,10 +1,11 @@
+import React from "react";
 import Footer from "../Footer";
 import UserNav from "./UserNav";
 import "./User.css";
 
 const User = () => {
   return (
-    <user>
+    <div className="user">
       <UserNav />
       <div className="user_index">
         <div className="user_index_text">
@@ -21,11 +22,11 @@ const User = () => {
         </div>
         <div className="user_index_section">
           <div className="user_index_section1">
-            <img src="/assets/index_user_img2.png" />
+            <img src="/assets/index_user_img3.jpg" alt="Study Place" />
             <div className="user_index_section1_text">
               <h1>
-                이제는 눈치 보지말고 나만의 <br />
-                스터디 플레이스를 즐겨보세요!
+                스터디 플레이스는 <br />
+                cafe-in과 함께!
               </h1>
             </div>
           </div>
@@ -36,12 +37,13 @@ const User = () => {
                 찾아보세요!
               </h1>
             </div>
-            <img src="/assets/index_user_img1.png" />
+            <img src="/assets/index_user_img4.jpg" alt="Search Cafe" />
           </div>
         </div>
       </div>
       <Footer />
-    </user>
+    </div>
   );
 };
+
 export default User;

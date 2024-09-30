@@ -2,6 +2,7 @@
   font-family: "HakgyoansimSantteutdotumL";
   src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
 }
+
 .manager_nav {
   width: 100%;
   display: flex;
@@ -14,17 +15,19 @@
   position: relative;
   z-index: 1;
 }
+
 .header_img {
   width: 30%;
   margin: auto;
 }
+
 .header_img img {
   width: 50%;
   margin-left: 80px;
   padding-top: 10px;
 }
+
 .manager_nav_item {
-  /* background-color: #ffcd4a; */
   position: relative;
   width: 40%;
   text-align: center;
@@ -33,6 +36,7 @@
   height: 130px;
   margin-right: -150px;
 }
+
 .manager_nav_item h3 {
   color: black;
   height: 100%;
@@ -40,7 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 130%;
+  font-size: 150%; /* 플루이드 타이포그래피 적용 */
 }
 
 a {
@@ -61,9 +65,11 @@ a {
   text-align: center;
   margin-left: -10px;
 }
+
 .manager_nav_item h3:hover {
   color: red;
 }
+
 .manager_nav_item:hover .manager_dropdown_content {
   width: 70%;
   display: flex;
@@ -76,10 +82,13 @@ a {
 .manager_dropdown_content p {
   color: black;
   font-family: "HakgyoansimSantteutdotumL";
+  font-size: calc(1.2vw + 8px); /* 플루이드 타이포그래피 적용 */
 }
+
 .manager_dropdown_content p:hover {
   font-weight: bold;
 }
+
 .header_right {
   width: 30%;
   display: flex;
@@ -89,6 +98,64 @@ a {
   justify-content: end;
   margin-right: 100px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 100%; /* 플루이드 타이포그래피 적용 */
+  white-space: nowrap; /* 줄바꿈 방지 */
 }
 
+/* 반응형 미디어 쿼리: 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .manager_nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .header_img {
+    width: 50%; /* 이미지 크기 축소 */
+    margin-bottom: 10px;
+  }
+
+  .manager_nav_item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 60px;
+    height: 100px;
+  }
+
+  .manager_nav_item h3 {
+    font-size: calc(1.5vw + 8px); /* 플루이드 타이포그래피 유지 */
+  }
+
+  .header_right {
+    width: 0%; /* 박스 너비 조정 */
+    justify-content: center;
+    margin-right: 0;
+    margin-top: 10px; /* 마진 조정 */
+    text-align: center; /* 중앙 정렬 */
+    order: 1; /* "카페 예약 관리" 아래로 이동 */
+    flex-direction: row; /* 수평 정렬 유지 */
+    gap: 0.5rem; /* 간격 조정 */
+    
+  }
+
+  .header_right p {
+    margin: 0; /* 줄 간격 조정 */
+    font-size: 100%; /* 글자 크기 조정 */
+  }
+}
+
+.loginafterbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* 원하는 너비로 설정 */
+  margin: auto; /* 중앙 정렬 */
+  padding: 5px; /* 패딩 추가 (선택 사항) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 00); /* 그림자 추가 (선택 사항) */
+}
+
+.logoutButton {
+  margin-left: 10px; /* 버튼과 텍스트 간의 간격 조정 */
+}

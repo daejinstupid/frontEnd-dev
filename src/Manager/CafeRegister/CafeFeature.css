@@ -31,3 +31,20 @@
   background-color: #7CD0FF;
   color: black;
 }
+
+/* 모바일 화면에 대한 스타일 (480px 이하) */
+@media (max-width: 480px) {
+  .cafeFeature-Chips {
+    grid-template-columns: 1fr; /* 한 줄에 하나씩 배치 */
+    gap: 1rem; /* 갭 조정 */
+  }
+
+  .cafeFeature-Chips button {
+    width: 100%; /* 버튼 너비를 100%로 확장 */
+    height: 3rem; /* 높이를 약간 줄임 */
+    font-size: 1.2rem; /* 폰트 크기를 조금 줄임 */
+  }
+  .cafe-register-title p {
+    font-size: 1.8rem;
+  }
+}

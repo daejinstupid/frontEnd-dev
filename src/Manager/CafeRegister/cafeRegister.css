@@ -174,3 +174,46 @@ button{
   width: 8rem;
   height: 2.5rem;
 }
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row; /* 버튼을 가로로 배치 */
+    justify-content: space-between; /* 버튼을 양쪽 끝으로 배치 */
+    width: 100%; /* 너비를 100%로 설정하여 화면에 맞게 조정 */
+    max-width: 430px; /* 최대 너비를 430px로 설정 */
+    margin: 1rem auto; /* 중앙 정렬 */
+    padding: 1rem; /* 내부 여백 추가 */
+    box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
+  }
+
+  .button-previous, .button-next {
+    display: flex;
+    flex-direction: row; /* 가로로 배치 */
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* 버튼이 같은 비율로 공간을 차지하도록 설정 */
+    margin: 0 0.5rem; /* 버튼 간 간격을 좁히기 위해 여백 추가 */
+  }
+
+  .previous, .next {
+    background: none !important;
+    border: none;
+    opacity: 0.9;
+    font-size: 4rem;
+    display: flex;
+    align-items: center; /* 버튼 내에서 텍스트와 화살표 정렬 */
+    margin: 0; /* 여백 없애기 */
+    padding: 0; /* 내부 여백 없애기 */
+    width: 100%; /* 버튼의 너비를 100%로 설정 */
+  }
+  .cafe-register-box {
+    width: 100%; /* 모바일에서 90% 너비 사용 */
+    max-width: 320px; /* 최대 너비 430px */
+    margin: 0 auto; /* 중앙 정렬 */
+    box-sizing: border-box; /* 패딩과 보더 포함 */
+  }
+
+}

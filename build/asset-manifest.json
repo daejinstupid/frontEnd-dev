@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b1dc4f84.css",
+    "main.js": "/static/js/main.b557e717.js",
+    "static/media/register-background.png": "/static/media/register-background.55334538c9a1991a39f8.png",
+    "static/media/ez.jpg": "/static/media/ez.3080ec3c022bfd635fca.jpg",
+    "static/media/cafeindexbg2.png": "/static/media/cafeindexbg2.2fabb75d3da3b9199301.png",
+    "static/media/sideground.jpg": "/static/media/sideground.4c7ed728b2868151f381.jpg",
+    "static/media/HakgyoansimSantteutdotumL.ttf": "/static/media/HakgyoansimSantteutdotumL.20955c97fde528d04868.ttf",
+    "static/media/After img.png": "/static/media/After img.2727bb14a421ed8f3fad.png",
+    "static/media/first BackGround.jpg": "/static/media/first BackGround.e65ef2f2186bdc696170.jpg",
+    "static/media/Open_Background.jpg": "/static/media/Open_Background.1b46dbf6a2e2ebaa20ed.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.b1dc4f84.css.map": "/static/css/main.b1dc4f84.css.map",
+    "main.b557e717.js.map": "/static/js/main.b557e717.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1dc4f84.css",
+    "static/js/main.b557e717.js"
+  ]
+}

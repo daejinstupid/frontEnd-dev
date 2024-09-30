@@ -62,6 +62,7 @@ const UserMyInfo = () => {
           </Link>
         </div>
       </div>
+      <br />
       <Footer />
     </usermyinfo>
   );
