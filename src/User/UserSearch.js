@@ -35,7 +35,7 @@ const UserSearch = () => {
     cafesData.forEach((cafeInfo) => {
       const {
         latitude,
-        longtitude,
+        longitude,
         cafeName,
         cafeReqImg,
         address,
@@ -44,7 +44,7 @@ const UserSearch = () => {
         cafeTel,
       } = cafeInfo;
 
-      const position = new kakao.maps.LatLng(latitude, longtitude);
+      const position = new kakao.maps.LatLng(latitude, longitude);
       const marker = new kakao.maps.Marker({
         map: map,
         position: position,
@@ -200,7 +200,7 @@ const UserSearch = () => {
           searchCafes.forEach((cafeInfo) => {
             const position = new kakao.maps.LatLng(
               cafeInfo.latitude,
-              cafeInfo.longtitude
+              cafeInfo.longitude
             );
             const marker = new kakao.maps.Marker({
               map: map,

@@ -260,7 +260,7 @@ const CafeRegister = () => {
                 ? " "
                 : cafeBasicInfo.address.areaAddress
             }`,
-            longtitude: cafeBasicInfo.address.X,
+            longitude: cafeBasicInfo.address.X,
             latitude: cafeBasicInfo.address.Y,
             cafeTel: cafeBasicInfo.phoneNumber,
             study: cafeStudySetting.studySetting,

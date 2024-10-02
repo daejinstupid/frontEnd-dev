@@ -32,7 +32,7 @@
 .finish-modal-buttons {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .finish-modal-buttons button {

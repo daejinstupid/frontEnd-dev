@@ -43,13 +43,13 @@ function ManagerUpdateBasic() {
       try {
         const response = await managerBasicRead();
         if (response.data.isSuccess) {
-          const { cafeName, cafeType, cafeTel, address, detailAddress,longtitude, latitude, cafeRepImg, cafeRepImgMine, cafeCheck } = response.data.data;
+          const { cafeName, cafeType, cafeTel, address, detailAddress,longitude, latitude, cafeRepImg, cafeRepImgMine, cafeCheck } = response.data.data;
           setCafeName(cafeName)
           setPhone(cafeTel); // 전화번호 상태 설정
           setAddressObj({
             areaAddress: detailAddress, // 상세 주소
             townAddress: address, // 도시 주소
-            X: longtitude,
+            X: longitude,
             Y: latitude,
             
           });
@@ -120,7 +120,7 @@ function ManagerUpdateBasic() {
   
     const updatedAddress = {
       address: fullAddress,
-      longtitude: updatedLongitude, 
+      longitude: updatedLongitude, 
       latitude: updatedLatitude
     };
   

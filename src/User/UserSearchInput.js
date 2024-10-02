@@ -166,7 +166,7 @@ const UserSearchInput = ({
       preferSeat: modalData.preferSeat,
       word: word,
       pageNo: page,
-      longtitude: userLocation ? userLocation.lon : 126.88268,
+      longitude: userLocation ? userLocation.lon : 126.88268,
       latitude: userLocation ? userLocation.lat : 37.479943,
     };
 

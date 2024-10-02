@@ -12,6 +12,7 @@
   font-family: "HakgyoansimSantteutdotumL";
   height: 100px;
   width: 100%;
+  
 }
 
 .divider {
@@ -36,9 +37,10 @@
 .user_cafe_name_before {
   font-weight: bold;
   font-size: 25px;
-  padding: 20px;
+  padding: 14px;
   margin-left: 20px;
-  margin-right: -80px;
+  margin-right: -20px;
+  transform: translateY(10px); /* 아래로 이동 */
 }
 
 .user_inprogress-info_before {
@@ -83,6 +85,7 @@
 .user_reservation_progress_before h4 {
   font-size: 150%;
   width: 100%;
+  transform: translateY(-20px); /* 아래로 이동 */
 }
 
 .user_myReservation_no_exist {
