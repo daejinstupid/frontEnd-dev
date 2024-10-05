@@ -190,4 +190,62 @@
     font-size: 80%; /* 폰트 크기 줄임 */
   }
   
+  /* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
+@media screen and (max-width: 430px) {
+  .search_filter_form {
+    width: 100%; /* 모달 너비를 100%로 조정 */
+    padding: 10px;
+    height: auto; /* 높이를 자동으로 조정 */
+  }
+
+  .search_filter_select select {
+    width: 60%; /* 셀렉트박스 너비 조정 */
+    font-size: 16px; /* 폰트 크기 줄임 */
+  }
+
+  .search_filter_time {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0; /* 시간 선택 섹션의 마진 조정 */
+  }
+
+  .search_filter_time select {
+    width: 80%; /* 시간 선택 박스 너비 조정 */
+    font-size: 16px; /* 시간 선택 폰트 크기 조정 */
+  }
+
+  .search_filter_header img {
+    width: 20px;
+    height: 20px; /* 닫기 아이콘 크기 조정 */
+  }
+
+  .search_filter_submit button {
+    width: 90px; /* 버튼 너비 조정 */
+    font-size: 80%; /* 버튼 폰트 크기 줄임 */
+  }
+
+  .search_filter_second_radio,
+  .search_filter_third_radio {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 라디오 버튼들을 세로로 배치하고 중앙 정렬 */
+  }
+
+  .search_filter_second_radio input,
+  .search_filter_third_radio input {
+    margin-top: 5px;
+  }
+
+  .search_filter_first,
+  .search_filter_second,
+  .search_filter_tird {
+    margin-bottom: 15px; /* 섹션 간 간격 조정 */
+  }
+
+  .search_filter_third_radio select {
+    width: 60%; /* 셀렉트박스 너비 조정 */
+    font-size: 16px;
+  }
+}
+
 }

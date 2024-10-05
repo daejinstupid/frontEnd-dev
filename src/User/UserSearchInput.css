@@ -436,4 +436,151 @@
     width: 20px; /* 페이지네이션 버튼 크기 조정 */
   }
   
+  /* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
+@media screen and (max-width: 430px) {
+  .searchinput_header img {
+    width: 45%; /* 로고 이미지 크기 조정 */
+  }
+
+  .searchinput_header input {
+    width: 90%; /* 검색창 너비 조정 */
+    font-size: 14px; /* 텍스트 크기 줄임 */
+  }
+
+  .searchinput_section1,
+  .searchinput_section2,
+  .searchinput_section3 {
+    flex-direction: column; /* 섹션의 아이템들을 세로 배치 */
+    align-items: center;
+  }
+
+  .searchinput_section2{
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .searchinput_section1 select,
+  .searchinput_section1 button,
+  .searchinput_section2 button,
+  .searchinput_section3 button {
+    width: 90%; /* 버튼과 셀렉트 박스 너비 확장 */
+    margin-bottom: 10px;
+  }
+
+  .searchinput_section2 button,
+
+  .search_button_filter {
+    width: 100%;
+  }
+
+  .search_button_filter button {
+    font-size: 14px; /* 버튼 내 텍스트 크기 조정 */
+  }
+
+  .search_submit button {
+    width: 100px; /* 검색 버튼 크기 조정 */
+    font-size: 14px; /* 텍스트 크기 조정 */
+  }
+
+  .search_cafe_info {
+    flex-direction: column; /* 카페 정보 섹션의 아이템을 세로로 배치 */
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search_cafe_info_img {
+    width: 100%;
+  }
+
+  .search_cafe_info_text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .user_search_pagination button {
+    width: 20px; /* 페이지네이션 버튼 크기 조정 */
+  }
+
+  .no-results img {
+    width: 20%; /* '결과 없음' 이미지 크기 조정 */
+  }
+
+  .no-results h4 {
+    font-size: 14px; /* '결과 없음' 텍스트 크기 조정 */
+  }
+
+  .searchinput_toggle {
+    flex-direction: column; /* 토글 버튼들을 세로로 배치 */
+    align-items: center;
+  }
+
+  .searchinput_toggle button {
+    width: 100px; /* 토글 버튼 너비 조정 */
+    font-size: 14px; /* 텍스트 크기 조정 */
+  }
+  .UserSearchCafeInfo_header img {
+    width: 18px; /* 헤더 아이콘 크기 조정 */
+    height: 18px;
+    margin-left: 72%; /* 아이콘 위치 조정 */
+  }
+
+  .usersearchcafeinfo_img {
+    width: 95%; /* 이미지 영역 확장 */
+  }
+
+  .usersearchcafeinfo_sections img {
+    width: 10px; /* 아이콘 크기 줄임 */
+    height: 10px;
+  }
+
+  .usersearchcafeinfo_sections p {
+    width: 100%; /* 텍스트 너비 확장 */
+    font-size: 12px; /* 텍스트 크기 조정 */
+    margin-top: 10px; /* 텍스트 상단 여백 조정 */
+  }
+
+  .go_to_reservation button {
+    width: 90%; /* 버튼 너비 확장 */
+    height: 30px; /* 버튼 높이 조정 */
+    font-size: 14px; /* 버튼 폰트 크기 조정 */
+  }
+
+  .usersearchcafeinfo_section {
+    margin: 20px 0 80px 5px; /* 섹션 마진 조정 */
+  }
+
+  /* searchinput_input img 크기 조정 */
+  .searchinput_input img {
+    width: 15px; /* 이미지 너비 조정 */
+    height: 15px; /* 이미지 높이 조정 */
+    margin: 5px auto 0 -10%; /* 이미지의 위치 조정 */
+  }
+
+  .searchinput_input img.visited {
+    width: 18px; /* 방문한 이미지의 크기 조정 */
+    height: 18px;
+  }
+  
+  .search_button_filter {
+    width: 90%; /* 버튼 필터 너비를 100%로 설정 */
+    margin: auto;
+  }
+
+  .search_button_filter button {
+    width: 100%; /* 버튼 너비를 90%로 설정 */
+    font-size: 14px; /* 버튼 내 텍스트 크기 조정 */
+    padding: -20px; /* 패딩 조정 */
+  }
+
+  .search_button_filter img {
+    width: 12%; /* 버튼 내부 이미지 크기 조정 */
+    margin: auto;
+  }
+
+  .search_button_filter p {
+    font-size: 15px; /* 텍스트 크기 조정 */
+  }
+}
+
 }

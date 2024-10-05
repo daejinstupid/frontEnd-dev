@@ -116,4 +116,39 @@
     height: 30px;
     font-size: 14px; /* 버튼 폰트 크기 줄임 */
   }
+
+  /* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
+@media screen and (max-width: 430px) {
+  .UserSearchCafeInfo_header img {
+    width: 18px; /* 헤더 아이콘 크기 조정 */
+    height: 18px;
+    margin-left: 72%; /* 아이콘 위치 조정 */
+  }
+
+  .usersearchcafeinfo_img {
+    width: 95%; /* 이미지 영역 확장 */
+  }
+
+  .usersearchcafeinfo_sections img {
+    width: 10px; /* 아이콘 크기 줄임 */
+    height: 10px;
+  }
+
+  .usersearchcafeinfo_sections p {
+    width: 100%; /* 텍스트 너비 확장 */
+    font-size: 12px; /* 텍스트 크기 조정 */
+    margin-top: 10px; /* 텍스트 상단 여백 조정 */
+  }
+
+  .go_to_reservation button {
+    width: 90%; /* 버튼 너비 확장 */
+    height: 30px; /* 버튼 높이 조정 */
+    font-size: 14px; /* 버튼 폰트 크기 조정 */
+  }
+
+  .usersearchcafeinfo_section {
+    margin: 20px 0 80px 5px; /* 섹션 마진 조정 */
+  }
+}
+
 }
