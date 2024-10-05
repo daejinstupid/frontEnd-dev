@@ -179,4 +179,44 @@
   .go-register-section {
     margin-left: 2rem;
   }
+/* 아이폰 14 Pro Max 크기인 430x932 해상도에 맞춘 추가 반응형 스타일 */
+@media screen and (max-width: 430px) {
+  .login-box {
+    width: 20rem; /* 로그인 박스 너비 조정 */
+    padding: 0.8rem;
+    top: 300px; /* 로그인 박스 아래쪽으로 위치 조정 */
+  }
+
+  .login-title {
+    font-size: 1.3rem; /* 타이틀 크기 조정 */
+    top: 150px; /* 타이틀 위치 조정 */
+  }
+
+  .login-inputs {
+    margin-top: 1.2rem; /* 입력 필드 간 간격 조정 */
+    gap: 1.2rem; /* 간격 조정 */
+  }
+
+  .login-box input {
+    padding: 0.7rem; /* 입력 필드 크기 조정 */
+    font-size: 0.85rem; /* 입력 필드 폰트 크기 조정 */
+  }
+
+  .login-button {
+    width: 6rem; /* 버튼 크기 조정 */
+    margin-left: 7.5rem; /* 중앙 정렬 조정 */
+  }
+
+  .go-register-section {
+    margin-left: 2.5rem; /* "회원가입" 섹션 위치 조정 */
+  }
+
+  /* login-intro 글씨 크기 줄임 */
+  .login-intro {
+    font-size: 1rem; /* 글씨 크기 줄여서 박스 안에서 줄바꿈 방지 */
+    margin-left: 2rem; /* 텍스트 위치 조정 */
+  }
+}
+  
+
 }
