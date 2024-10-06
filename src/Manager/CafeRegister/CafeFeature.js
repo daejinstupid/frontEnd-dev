@@ -7,7 +7,7 @@ const CafeFeature = ({ onFeaturesChange, selectedFeatures }) => {
     "베이커리": "noMusic",
     "24시간": "comfortableSeats",
     "1인실": "hasDesserts",
-    "감성적": "sentimental",
+    "주차여부": "sentimental",
     "콘센트": "hasPowerOutlets"
   };
 
