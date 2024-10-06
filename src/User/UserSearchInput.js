@@ -37,7 +37,7 @@ const UserSearchInput = ({
     button4: "24시간",
     button5: "1인실",
     button6: "콘센트",
-    button7: "조용함",
+    button7: "세미나실",
     button8: "음악없음",
     button9: "감성적",
   };
@@ -327,11 +327,11 @@ const UserSearchInput = ({
         {showtoggle && (
           <div className="searchinput_toggle">
             <button
-              value="조용함"
+              value="세미나실"
               onClick={() => handleFeatureButtonClick("button7")}
               className={featureButtonStates.button7 === "Y" ? "active" : ""}
             >
-              조용함
+              세미나실
             </button>
             <button
               value="음악없음"

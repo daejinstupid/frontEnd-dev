@@ -3,7 +3,7 @@ import "./CafeFeature.css";
 
 const CafeFeature = ({ onFeaturesChange, selectedFeatures }) => {
   const featureMapping = {
-    "조용함": "quiet",
+    "세미나실": "quiet",
     "음악 없음": "noMusic",
     "24시간": "comfortableSeats",
     "1인실": "hasDesserts",
