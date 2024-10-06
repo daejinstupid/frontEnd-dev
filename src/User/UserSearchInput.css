@@ -437,7 +437,7 @@
   }
   
   /* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) 
   .searchinput_header img {
     width: 45%; /* 로고 이미지 크기 조정 */
   }
@@ -583,4 +583,3 @@
   }
 }
 
-}
