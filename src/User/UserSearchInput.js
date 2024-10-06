@@ -34,7 +34,7 @@ const UserSearchInput = ({
     button9: "",
   });
   const featureMapping = {
-    button4: "편한 좌석",
+    button4: "24시간",
     button5: "디저트",
     button6: "콘센트",
     button7: "조용함",
@@ -295,11 +295,11 @@ const UserSearchInput = ({
         </div>
         <div className="searchinput_section3">
           <button
-            value="편한 좌석"
+            value="24시간"
             onClick={() => handleFeatureButtonClick("button4")}
             className={featureButtonStates.button4 === "Y" ? "active" : ""}
           >
-            편한 좌석
+            24시간
           </button>
           <button
             value="디저트"

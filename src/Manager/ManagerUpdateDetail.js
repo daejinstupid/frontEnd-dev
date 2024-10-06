@@ -115,7 +115,7 @@ function ManagerUpdateDetail() {
 
   try {
     const features = {
-      "comfortableSeats": selectedChips.has("편한 좌석"),
+      "comfortableSeats": selectedChips.has("24시간"),
       "hasDesserts": selectedChips.has("디저트"),
       "quiet": selectedChips.has("조용함"),
       "noMusic": selectedChips.has("음악 없음"),
@@ -177,7 +177,7 @@ function ManagerUpdateDetail() {
 
           // 카페 특성 설정
           const featureSet = new Set(featureResponse.featureIds);
-          const initialChips = ["조용함", "음악 없음", "편한 좌석", "디저트", "감성적", "콘센트"].map(
+          const initialChips = ["조용함", "음악 없음", "24시간", "디저트", "감성적", "콘센트"].map(
             (chip, index) => ({ name: chip, selected: featureSet.has(index + 22) })
           );
           setSelectedChips(new Set(initialChips.filter(chip => chip.selected).map(chip => chip.name)));
@@ -323,7 +323,7 @@ function ManagerUpdateDetail() {
                 {[
                   "조용함",
                   "음악 없음",
-                  "편한 좌석",
+                  "24시간",
                   "디저트",
                   "감성적",
                   "콘센트",

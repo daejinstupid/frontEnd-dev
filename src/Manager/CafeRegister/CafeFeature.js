@@ -5,7 +5,7 @@ const CafeFeature = ({ onFeaturesChange, selectedFeatures }) => {
   const featureMapping = {
     "조용함": "quiet",
     "음악 없음": "noMusic",
-    "편한 좌석": "comfortableSeats",
+    "24시간": "comfortableSeats",
     "디저트": "hasDesserts",
     "감성적": "sentimental",
     "콘센트": "hasPowerOutlets"
