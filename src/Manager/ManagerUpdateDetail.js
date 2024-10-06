@@ -118,7 +118,7 @@ function ManagerUpdateDetail() {
       "comfortableSeats": selectedChips.has("24시간"),
       "hasDesserts": selectedChips.has("1인실"),
       "quiet": selectedChips.has("세미나실"),
-      "noMusic": selectedChips.has("음악 없음"),
+      "noMusic": selectedChips.has("베이커리"),
       "sentimental": selectedChips.has("감성적"),
       "hasPowerOutlets": selectedChips.has("콘센트")
     };
@@ -177,7 +177,7 @@ function ManagerUpdateDetail() {
 
           // 카페 특성 설정
           const featureSet = new Set(featureResponse.featureIds);
-          const initialChips = ["세미나실", "음악 없음", "24시간", "1인실", "감성적", "콘센트"].map(
+          const initialChips = ["세미나실", "베이커리", "24시간", "1인실", "감성적", "콘센트"].map(
             (chip, index) => ({ name: chip, selected: featureSet.has(index + 22) })
           );
           setSelectedChips(new Set(initialChips.filter(chip => chip.selected).map(chip => chip.name)));
@@ -322,7 +322,7 @@ function ManagerUpdateDetail() {
               <div className="ManagerUpdateBasic-Container-Chips-Input">
                 {[
                   "세미나실",
-                  "음악 없음",
+                  "베이커리",
                   "24시간",
                   "1인실",
                   "감성적",

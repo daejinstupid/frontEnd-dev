@@ -38,7 +38,7 @@ const UserSearchInput = ({
     button5: "1인실",
     button6: "콘센트",
     button7: "세미나실",
-    button8: "음악없음",
+    button8: "베이커리",
     button9: "감성적",
   };
   const [searchFilterData, setSearchFilterData] = useState({
@@ -334,11 +334,11 @@ const UserSearchInput = ({
               세미나실
             </button>
             <button
-              value="음악없음"
+              value="베이커리"
               onClick={() => handleFeatureButtonClick("button8")}
               className={featureButtonStates.button8 === "Y" ? "active" : ""}
             >
-              음악없음
+              베이커리
             </button>
             <button
               value="감성적"
