@@ -3,11 +3,11 @@ import "./CafeFeature.css";
 
 const CafeFeature = ({ onFeaturesChange, selectedFeatures }) => {
   const featureMapping = {
-    "세미나실": "quiet",
-    "베이커리": "noMusic",
-    "24시간": "comfortableSeats",
-    "1인실": "hasDesserts",
-    "주차여부": "sentimental",
+    "세미나실": "seminar",
+    "베이커리": "bakery",
+    "24시간": "everyhour",
+    "1인실": "roomforones",
+    "주차여부": "parkinglot",
     "콘센트": "hasPowerOutlets"
   };
 
