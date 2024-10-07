@@ -46,7 +46,7 @@ const Manager = () => {
         <div className="image-container">
           <img src="assets/small_img2.JPEG" alt="이미지 2" />
           <div className="overlay-text">
-          고객의 예약을 보다 효과적으로 지원하여 <br></br>자원 낭비를 줄이고 <br></br> 카페 운영의 효율성을 <br></br>극대화합니다.
+          고객의 예약을 보다 효과적으로 지원하여 자원 낭비를 <br></br> 줄이고 카페 운영의 효율성을 극대화합니다.
           </div>
           <div className="caption">효율적인 제공</div>
         </div>
