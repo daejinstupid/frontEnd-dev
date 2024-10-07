@@ -1,210 +1,267 @@
+.ManagerReservationList {
+    margin: 0;
+    width: auto;
+    height: 45rem;
+    margin-bottom: 4rem;
+}
+
+.ManagerReservationList-Container {
+    width: 100%;
+    height: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.ManagerReservationList-Container-Items {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    background-color: rgba(255, 255, 255, 0.896);
+}
+
+.ManagerReservationList-Container-Date-Section {
+    display: flex;
+}
+
+.ManagerReservationList-Container-Date {
+    margin: 1rem 2rem;
+}
+
+.ManagerReservationList-Container-Date-Text {
+    width: 30rem;
+}
+
+/* 예약 출력 섹션 */
+.ReservationList-Section:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.ReservationList-Section {
+    width: 40rem;
+    display: flex;
+    margin: 0.5rem 0;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+    height: 35%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Manager-res-spinner-container {
+    display: flex;
+    flex-flow: column;
+    margin: 0 4rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+/* 예약 상태에 따른 색상 */
+.status-A {
+    color: #ED6A5A; 
+}
+
+.status-P {
+    color: #007CBE;
+}
+
+.status-F {
+    color: black;
+}
+
+.ReservationList-Status-items {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.ManagerReservationList-Container-List-Section {
+    width: auto;
+    margin: 1rem 2rem;
+}
+
+.ManagerReservationList-Container-List-OverFlow {
+    width: 100%;
+    height: 25rem;
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    max-height: 25rem;
+}
+
+.ManagerReservationList-Container-List-OverFlow::-webkit-scrollbar {
+    display: none;
+}
+
+.ReservationList-UserName {
+    display: flex;
+    flex-flow: row;
+    margin: auto 1rem;
+    align-items: center;
+    margin-left: 10rem;
+}
+
+.ReservationList-UserName h2 {
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+}
+
+.ReservationList-Status {
+    display: flex;
+    padding: 0 0.5rem;
+}
+
+.ReservationList-Status p {
+    margin: 0.8rem, 0.5rem;
+    font-weight: bold;
+}
+
+.ReservationList-Status div {
+    margin: auto 1rem;
+}
+
+.ReservationList-Status-Reservation {
+    margin: auto 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.ReservationList-Status-No {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem 1.5rem;
+}
+
+.ReservationList-Status-No img {
+    width: 10rem;
+    margin-top: 2rem;
+}
+
+.ManagerReservationList-Container-List-items {
+    display: block;
+}
+
+/* 모바일 */
+@media screen and (max-width: 480px) {
     .ManagerReservationList {
-        margin: 0;
-        width: auto;
-        height: 45rem;
-        margin-bottom: 4rem;
+        width: 100%; /* 전체 화면 너비 */
+        height: auto; /* 높이를 자동으로 조정 */
+        margin-bottom: 2rem; /* 하단 여백 축소 */
     }
 
     .ManagerReservationList-Container {
         width: 100%;
-        height: 100%;
-        margin: 2rem auto;
+        height: auto;
+        margin: 1rem auto; /* 전체적인 마진 축소 */
         display: flex;
-        justify-content: center;
+        flex-direction: column; /* 모바일에서 세로 배치 */
+        align-items: center; /* 가로 정렬 */
     }
 
     .ManagerReservationList-Container-Items {
-        display: flex;
-        justify-content: center;
-        flex-flow: column;
-        background-color: rgba(255, 255, 255, 0.896);;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.896);
+        padding: 1rem; /* 내부 패딩 추가 */
     }
 
     .ManagerReservationList-Container-Date-Section {
-        display: flex;
+        flex-direction: column; /* 날짜 섹션 세로 배치 */
+        align-items: center;
     }
 
     .ManagerReservationList-Container-Date {
-        margin: 1rem 2rem;
+        margin: 1rem 0; /* 상단 및 하단 마진 축소 */
+        text-align: center; /* 중앙 정렬 */
     }
 
     .ManagerReservationList-Container-Date-Text {
-        width: 30rem;
-    }
-
-
-    /* 예약 출력 섹션 */
-
-    .ReservationList-Section:hover {
-        cursor: pointer;
-        background-color: whitesmoke;
+        width: 100%; /* 전체 화면 너비 */
+        font-size: 0.9rem; /* 폰트 크기 조정 */
     }
 
     .ReservationList-Section {
-        width: 40rem;
-        display: flex;
-        margin: 0.5rem 0;
-        flex-flow: row;
-        justify-content: space-around;
-        padding: 0.5rem;
-        height: 35%;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-        
-    }
-    .Manager-res-spinner-container{
-        display: flex;
-        flex-flow: column;
-        margin: 0 4rem;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-    }
-
-    /* 예약 상태에 따른 색상 */
-    .status-A {
-        color: #ED6A5A; 
-    }
-    
-    .status-P {
-        color: #007CBE;
-    }
-    
-    .status-F {
-        color: black;
-    }
-
-    .ReservationList-Status-items{
-        display: flex;
-        flex-flow: column;
-        justify-content: space-around;
-
-    }
-
-    .ManagerReservationList-Container-List-Section {
-        width: auto;
-        margin: 1rem 2rem;
-        
-    }
-
-    .ManagerReservationList-Container-List-OverFlow{
-        width: 100%;
-        height: 25rem;
-        overflow-y: auto; /* 세로 스크롤 활성화 */
-        max-height: 25rem;
-        
-
-    }
-
-    .ManagerReservationList-Container-List-OverFlow::-webkit-scrollbar {
-        display: none;
+        width: 90%; /* 카드 너비를 화면에 맞게 축소 */
+        flex-direction: column; /* 모바일에서 세로 배치 */
+        padding: 1rem; /* 패딩 조정 */
+        height: auto; /* 높이 자동 조정 */
+        margin: 0.5rem 0; /* 마진 유지 */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* 그림자 조정 */
     }
 
     .ReservationList-UserName {
-        display: flex;
-        flex-flow: row;
-        margin: auto 1rem;
-        align-items: center;
-        margin-left: 10rem;
+        margin: 0; /* 여백 제거 */
+        justify-content: center; /* 중앙 정렬 */
     }
 
     .ReservationList-UserName h2 {
-        justify-content: flex-end;
-        font-size: 1.5rem;
-        margin: 1rem auto;
+        font-size: 1.2rem; /* 폰트 크기 축소 */
+        margin: 0.5rem 0; /* 여백 축소 */
     }
 
     .ReservationList-Status {
-        display: flex;
-        
-        padding: 0 0.5rem;
+        flex-direction: column; /* 상태를 세로로 나열 */
+        align-items: center; /* 가운데 정렬 */
+        padding: 0.5rem 0; /* 패딩 조정 */
     }
 
     .ReservationList-Status p {
-        margin: 0.8rem, 0.5rem;
-        font-weight: bold;
+        margin: 0.5rem 0; /* 여백 조정 */
+        font-size: 1rem; /* 폰트 크기 축소 */
     }
 
-    .ReservationList-Status div{
-        margin: auto 1rem;
-    }
-
-    .ReservationList-Status-Reservation{
-        margin: auto 0;
-        font-weight: bold;
-        font-size: 1.3rem;
-    
+    .ReservationList-Status div {
+        margin: 0.5rem 0; /* 마진 조정 */
     }
 
     .ReservationList-Status-No {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin: 1rem 1.5rem;
+        font-size: 1.1rem; /* 폰트 크기 조정 */
+        margin: 0.5rem 0; /* 마진 조정 */
     }
 
     .ReservationList-Status-No img {
-        width: 10rem;
-        margin-top: 2rem;
+        width: 8rem; /* 이미지 크기 축소 */
+        margin-top: 1rem;
     }
 
-    .ManagerReservationList-Container-List-items{
-        display: block;
+    .ManagerReservationList-Container-List-OverFlow {
+        max-height: 20rem; /* 높이 조정 */
     }
 
-    /* .bg{
-        width: 40rem;
-        height: auto;
-        background-image: url(./../img/cafeindexbg.png); 
-        opacity: 0.7;
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: cover;
-        background-attachment: fixed;
-        display: flex; /* Flexbox를 사용하여 자식 요소들을 가로로 배치 */
-        /* align-items: cen; */
-    /* } */ 
-    @media screen and (max-width: 480px) {
-        .ManagerReservationList-Container-Date-Text {
-            white-space: nowrap; /* 줄바꿈 방지 */
-            overflow: hidden; /* 넘치는 부분 숨기기 */
-            text-overflow: ellipsis; /* 넘치는 부분 '...'으로 표시 */
-            margin-right: -3rem; /* 오른쪽 여백 추가 */
-        }
-    
-        .DatePicker-Section {
-            width: 100%; /* 화면 너비에 맞추기 */
-            max-width: 200px; /* 최대 너비 제한 */
-            margin: auto; /* 중앙 정렬 */
-        }
-    
-        .ManagerReservationList-Container-Date-Section {
-            flex-direction: column; /* 세로로 배치 */
-        }
-    
-        .ManagerReservationList-Container-Date {
-            margin: 8rem 0; /* 위아래 마진 추가 */
-        }
-    
-        .ManagerReservationList-Container-List-Section {
-            margin-top: -8rem; /* 필요에 따라 마진 조정 */
-        }
-    
-        /* 추가: 달력 크기 조정 */
-        .react-datepicker {
-            font-size: 0.8rem; /* 폰트 크기 줄이기 */
-        }
-    
-        .react-datepicker__triangle {
-            display: none; /* 삼각형 제거 (필요한 경우) */
-        }
+    /* 스피너 컨테이너 조정 */
+    .Manager-res-spinner-container {
+        margin: 0 1rem; /* 여백 축소 */
+        font-size: 1rem; /* 폰트 크기 줄이기 */
+        display: none;
     }
-    
+
+    .Manager-res-spinner-container h4 {
+        margin: 0; /* 여백 제거 */
+        padding: 0.5rem 0; /* 위아래 패딩 추가 */
+        word-wrap: break-word; /* 긴 텍스트가 화면을 넘어가지 않도록 줄바꿈 */
+        text-align: center; /* 중앙 정렬 */
+        width: 100%; /* 전체 너비로 설정 */
+        display: none; /* 모바일에서는 숨김 */
+    }    
+    /* 상태 색상 유지 */
+    .status-A {
+        color: #ED6A5A;
+    }
+
+    .status-P {
+        color: #007CBE;
+    }
+
+    .status-F {
+        color: black;
+    }
+}

@@ -1,42 +1,39 @@
-
-.ManagerSide-container{
-width: 15rem;
-margin-left:8rem;
-margin-top: 3rem;
-position: fixed;
+.ManagerSide-container {
+  width: 15rem;
+  margin-left: 8rem;
+  margin-top: 3rem;
+  position: fixed; /* PC 버전에서의 고정 */
 }
 
-.ManagerSide-container-items{
-display: flex;
-flex-flow: column;
-justify-content: space-around;
-text-align: center;
-height: auto;
-background-color: white;
-border: 0.05rem solid;
+.ManagerSide-container-items {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  text-align: center;
+  height: auto;
+  background-color: white;
+  border: 0.05rem solid;
 }
 
 .updatecafebasic.active {
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-
-.ManagerSide-container-items p{
-    font-size: 1rem;
-    margin : 1.3rem 1.5rem;
-    text-align: left;
+.ManagerSide-container-items p {
+  font-size: 1rem;
+  margin: 1.3rem 1.5rem;
+  text-align: left;
 }
 
 .updateText {
   padding: 1rem;
 }
 
-
-.updateText span{
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: auto;
-    margin-bottom: auto;
+.updateText span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .hidden {
@@ -50,4 +47,32 @@ border: 0.05rem solid;
 
 .no-select {
   color: rgb(196, 196, 196);
+}
+
+/* 모바일 스타일 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .ManagerSide-container {
+      width: 100%; /* 전체 화면 너비 */
+      margin: 0; /* 여백 제거 */
+      position: absolute; /* 절대 위치 설정으로 스크롤 따라오지 않게 함 */
+      top: 1; /* 화면 상단 고정 */
+      left: 0; /* 화면 왼쪽 고정 */
+  }
+
+  .ManagerSide-container-items {
+      height: auto; /* 높이 자동 조정 */
+      flex-direction: row; /* 세로 배치가 아닌 가로 배치 */
+      justify-content: space-between; /* 공간을 균등하게 나누기 */
+  }
+
+  .ManagerSide-container-items p {
+    font-size: 0.9rem; /* 모바일 화면에 맞게 폰트 크기 조정 */
+    margin: 0.5rem; /* 여백 조정 */
+    text-align: center; /* 중앙 정렬 */
+    flex-grow: 1; /* p 요소가 가로 공간을 균등하게 차지하도록 설정 */
+}
+
+.updateText span {
+    font-size: 1rem; /* 글자 크기를 줄임 */
+}
 }

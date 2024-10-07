@@ -8,7 +8,7 @@
 .ManagerUpdateBasic-Container {
     width: 100%;
     height: 100%;
-    margin-left: 3rem;
+    margin-left: 3rem; /* PC 버전 여백 유지 */
     display: flex;
     justify-content: center;
 }
@@ -21,12 +21,12 @@
     text-align: center;
 }
 
-.ManagerUpdateBasic-Container-Items button{
+.ManagerUpdateBasic-Container-Items button {
     text-decoration: underline;
-    text-underline-offset : 6px;
+    text-underline-offset: 6px;
     border: none;
-    
 }
+
 /* 아이템 공통 CSS */
 
 .ManagerUpdateBasic-Container-Items label {
@@ -53,7 +53,6 @@
     width: 5rem;
     height: 2rem;
     margin-top: 4rem;
-    
 }
 
 
@@ -65,7 +64,7 @@
     flex-flow: column;
 }
 
-.ManagerUpdateBasic-Container-Names label{
+.ManagerUpdateBasic-Container-Names label {
     text-align: start;
     margin-left: 6rem;
 }
@@ -78,24 +77,24 @@
     flex-flow: column;
 }
 
-.ManagerUpdateBasic-Container-Case label{
+.ManagerUpdateBasic-Container-Case label {
     text-align: start;
     margin-left: 6rem;
 }
 
 /* 전화번호 섹션  */
-.ManagerUpdateBasic-Container-Number-labeling{
+.ManagerUpdateBasic-Container-Number-labeling {
     display: flex;
     justify-content: space-between;
 }
 
-.ManagerUpdateBasic-Container-Number-labeling label{
+.ManagerUpdateBasic-Container-Number-labeling label {
     width: 15rem;
     text-align: start;
     margin-left: 6rem;
 }
 
-.ManagerUpdateBasic-Container-Number-text{
+.ManagerUpdateBasic-Container-Number-text {
     text-align: center;
 }
 
@@ -112,9 +111,9 @@
 .ManagerUpdateBasic-Container-Address-labeling {
     display: flex;
     justify-content: space-between;
-    
 }
-.ManagerUpdateBasic-Container-Address-labeling label{
+
+.ManagerUpdateBasic-Container-Address-labeling label {
     text-align: start;
     margin-left: 6rem;
 }
@@ -142,16 +141,18 @@
     text-align: start;
     margin-left: 6rem;
 }
-.ManagerUpdateBasic-Container-Address-Update-findAddress{
+
+.ManagerUpdateBasic-Container-Address-Update-findAddress {
     margin-top: 3rem;
     text-align: start;
     margin-bottom: 1.5rem;
 }
+
 .ManagerUpdateBasic-Container-Address-Update-findAddress button {
-    
     margin-left: 1rem;
 }
-.BasicAddress-Save{
+
+.BasicAddress-Save {
     height: 2rem;
     width: 100%;
     display: flex;
@@ -160,12 +161,12 @@
     margin-left: 0.5rem;
 }
 
-.BasicAddress-Save button{
+.BasicAddress-Save button {
     margin-right: 0.3rem;
     margin-top: 0;
 }
 
-.BasicAddress-find{
+.BasicAddress-find {
     margin-left: 5rem;
 }
 
@@ -175,22 +176,23 @@
 }
 
 /* 대표사진 */
-.ManagerUpdateBasic-Container-RepImg{
+.ManagerUpdateBasic-Container-RepImg {
     display: flex;
     flex-flow: column;
 }
+
 .ManagerUpdateBasic-Container-RepImg-Update-labeling {
     display: flex;
     justify-content: center;
     flex-flow: column;
 }
 
-.ManagerUpdateBasic-Container-RepImg-Update-labeling label{
+.ManagerUpdateBasic-Container-RepImg-Update-labeling label {
     text-align: start;
     margin-left: 6rem;
 }
 
-.ManagerUpdateRepImgBasic-RepImg-Container{
+.ManagerUpdateRepImgBasic-RepImg-Container {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -199,7 +201,7 @@
     gap: 2rem;
 }
 
-.ManagerUpdateBasic-Container-RepImg-Update-labeling-divs{
+.ManagerUpdateBasic-Container-RepImg-Update-labeling-divs {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -208,22 +210,22 @@
 .ManagerUpdateRepImgBasic-RepImg-Container button {
     width: 5rem;
     margin-top: 20rem;
-    
 }
 
-.ManagerUpdateRepImgBasic-RepImg-Buttons{
+.ManagerUpdateRepImgBasic-RepImg-Buttons {
     display: flex;
     justify-content: space-between;
     height: 5rem;
 }
-.ManagerUpdateRepImgBasic-RepImg-Buttons button{
+
+.ManagerUpdateRepImgBasic-RepImg-Buttons button {
     margin-top: auto;
     font-weight: bold;
     font-size: 1.1rem;
     background-color: #f9f9f9;
 }
 
-.ManagerUpdateRepImgBasic-RepImg-Container-Update{
+.ManagerUpdateRepImgBasic-RepImg-Container-Update {
     display: flex;
     flex-flow: column;
     margin-top: 3rem;
@@ -251,7 +253,7 @@
     margin-right: auto;
 }
 
-.ManagerUpdateRepImgBasic-RepImg-img{
+.ManagerUpdateRepImgBasic-RepImg-img {
     width: 24rem;
     height: 20rem;
     margin-top: 2rem;
@@ -262,20 +264,19 @@
     height: 20rem;
     object-fit: contain;
 }
-.custom-Repfile-upload-Container{
+
+.custom-Repfile-upload-Container {
     width: auto;
     height: 5rem;
     text-align: center;
     margin: 0;
 }
 
-.custom-Repfile-upload-Container button{
+.custom-Repfile-upload-Container button {
     background-color: #ccc !important;
-    
 }
 
-
-.custom-Repfile-upload{
+.custom-Repfile-upload {
     display: inline-block;
     margin: 0 auto !important;
     padding: 10px 10px;
@@ -291,7 +292,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Manager-res-spinner-container{
+.Manager-res-spinner-container {
     display: flex;
     flex-flow: column;
     margin: 0 4rem;
@@ -305,4 +306,115 @@
 
 .hidden {
     display: none;
+}
+/* 모바일 스타일 (480px 이하) */
+@media screen and (max-width: 480px) {
+    .ManagerUpdateBasic-Container {
+        margin-left: 0; /* 여백 제거 */
+        flex-direction: column; /* 세로 정렬 */
+        padding-top: 40px; /* 위쪽 패딩 추가하여 아래로 내리기 */
+    }
+
+    .ManagerUpdateBasic-Container-Items {
+        width: 100%; /* 전체 너비 사용 */
+        margin-bottom: 2rem; /* 여백 조정 */
+        text-align: center; /* 중앙 정렬 */
+    }
+
+    .ManagerUpdateBasic-Container-Items label {
+        width: auto; /* 너비 자동 조정 */
+        margin-left: 0; /* 여백 제거 */
+        font-size: 1.2rem; /* 폰트 크기 조정 */
+    }
+
+    .ManagerUpdateBasic-Container-Items input {
+        width: 90%; /* 입력 필드의 너비 조정 */
+        margin-left: auto; /* 가운데 정렬을 위해 자동 마진 */
+        margin-right: auto; /* 가운데 정렬을 위해 자동 마진 */
+    }
+
+    /* 아이템 공통 CSS */
+    .ManagerUpdateBasic-Container-Items button {
+        width: 5rem; /* 버튼 너비 조정 */
+        height: 2rem; /* 버튼 높이 조정 */
+        margin-top: 1rem; /* 버튼 간격 조정 */
+    }
+
+    .ManagerUpdateBasic-Container-Names label,
+    .ManagerUpdateBasic-Container-Case label,
+    .ManagerUpdateBasic-Container-Number-labeling label,
+    .ManagerUpdateBasic-Container-Address-labeling label {
+        margin-left: 0; /* 여백 제거 */
+        text-align: left; /* 왼쪽 정렬로 수정 */
+    }
+
+    /* 카페 주소 글씨를 왼쪽으로 붙이기 */
+    .ManagerUpdateBasic-Container-Address label {
+        text-align: left; /* 왼쪽 정렬로 수정 */
+    }
+
+    /* 주소 섹션의 버튼 위치 조정 */
+    .ManagerUpdateBasic-Container-Address-Update-findAddress,
+    .ManagerUpdateBasic-Container-Address-Update-save {
+        margin-top: 0.5rem; /* 기존보다 더 가까이 오도록 마진 조정 */
+    }
+
+    /* 전화번호 섹션 */
+    .ManagerUpdateBasic-Container-Number-labeling {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 주소 섹션 */
+    .ManagerUpdateBasic-Container-Address {
+        display: flex;
+        flex-flow: column;
+    }
+
+    /* 대표사진 */
+    .ManagerUpdateRepImgBasic-RepImg-Container {
+        width: 100%; /* 전체 너비 사용 */
+        display: flex;
+        justify-content: center;
+        margin: 0 auto; /* 가운데 정렬 */
+        gap: 1rem; /* 이미지 사이의 간격 조정 */
+    }
+
+    .ManagerUpdateRepImgBasic-RepImg-Container-Update {
+        width: 90%; /* 대표 이미지 업데이트 컨테이너의 너비 조정 */
+    }
+
+    .ManagerUpdateRepImgBasic-RepImg-img {
+        width: 100%; /* 이미지 너비 조정 */
+    }
+
+    .ManagerUpdateBasic-Container-RepImg-Update-labeling-divs {
+        flex-direction: column; /* 세로 정렬 */
+    }
+
+    .custom-Repfile-upload {
+        width: 90%; /* 파일 업로드 버튼 너비 조정 */
+        font-size: 1rem; /* 폰트 크기 조정 */
+    }
+
+    .Manager-res-spinner-container {
+        height: auto; /* 스피너 높이 자동 조정 */
+        font-size: 1rem; /* 폰트 크기 조정 */
+    }
+
+    /* 전체 콘텐츠를 아래로 내리기 위한 추가 마진 */
+    .ManagerUpdateBasic {
+        margin-top: 0px; /* 필요에 따라 이 값을 조정하여 전체적인 여백을 조절 */
+    }
+
+    /* 추가적으로 더 내려야 하는 경우 */
+    .ManagerUpdateBasic-Container-Items,
+    .ManagerUpdateBasic-Container-Names {
+        margin-top: 80px; /* 각 섹션에 여백 추가 */
+    }
+
+    /* 기타 */
+    .ManagerUpdateRepImgBasic-RepImg-Buttons button {
+        margin-top: 1rem; /* 버튼 간격 조정 */
+    }
 }

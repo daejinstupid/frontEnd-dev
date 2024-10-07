@@ -269,7 +269,8 @@
 }
 
 .ManagerUpdateStudySetting-SeatHeader-Buttons {
-  margin: auto 0;
+  margin-left: auto; /* 왼쪽 여백을 자동으로 설정하여 오른쪽으로 정렬 */
+  margin-right: 0; /* 오른쪽 여백은 필요 없다면 제거 */
 }
 
 /* .ManagerUpdateStudySetting-SeatSection{
@@ -313,6 +314,7 @@
 .ManagerUpdateStudySetting-SeatText {
   width: 100%;
   margin: auto;
+  font-size: 1rem;
 }
 
 .ManagerUpdateStudySetting-SeatSection-text {
@@ -446,4 +448,146 @@
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 480px) {
+  /* 기본적인 스타일 조정 */
+  .ManagerUpdateStudySetting-Container {
+    margin-left: 0; /* 마진 없애기 */
+  }
+
+  .ManagerUpdateStudySetting-CafeIf {
+    width: 100%; /* 너비를 100%로 설정 */
+  }
+
+  .ManagerUpdateStudySetting-Container-Items {
+    width: 90%; /* 너비를 90%로 조정 */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 2rem; /* 여백 조정 */
+    margin-top: 115px; /* 아래로 내리기 위한 여백 추가 */
+  }
+
+  .ManagerUpdateStudySetting-CafeIf h2 {
+    width: 100%; /* 너비를 100%로 설정 */
+    text-align: left; /* 왼쪽 정렬로 변경 */
+    margin-bottom: 1rem; /* 여백 조정 */
+  }
+
+  .ManagerUpdateStudySetting-CafeIf-Container {
+    flex-flow: column; /* 열 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+  }
+
+  .ManagerUpdateStudySetting-CafeIf-Text {
+    width: 90%; /* 너비를 줄이기 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+
+  .ManagerUpdateStudySetting-FloorPlan {
+    width: 100%; /* 너비를 100%로 설정 */
+  }
+
+  .ManagerUpdateStudySetting-FloorPlan h2 {
+    width: 100%; /* 너비를 100%로 설정 */
+    text-align: left; /* 왼쪽 정렬로 변경 */
+  }
+
+  .ManagerUpdateStudySetting-FloorPlan-Container {
+    flex-direction: column; /* 열 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+  }
+
+  .ManagerUpdateStudySetting-SeatContainer {
+    width: 100%; /* 너비를 100%로 설정 */
+  }
+
+  .ManagerUpdateStudySetting-SeatContainer h2 {
+    width: 100%; /* 너비를 100%로 설정 */
+    text-align: left; /* 왼쪽 정렬로 변경 */
+  }
+
+  .ManagerUpdateStudySetting-SeatItems-Container {
+    width: 100%; /* 너비를 100%로 설정 */
+  }
+
+  .ManagerUpdateStudySetting-SeatHeader {
+    flex-direction: column; /* 열 방향으로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    margin-bottom: 1rem; /* 여백 조정 */
+  }
+
+  .ManagerUpdateStudySetting-SeatHeader-Buttons {
+    margin-bottom: 2rem; /* 버튼 여백 조정 */
+  }
+
+  .ManagerUpdateStudySetting-SeatInput {
+    flex-direction: column; /* 열 방향으로 정렬 */
+    width: 90%; /* 너비를 줄이기 */
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+
+  .ManagerUpdateStudySetting-SeatPrint {
+    flex-direction: column; /* 열 방향으로 정렬 */
+    width: 90%; /* 너비를 줄이기 */
+    margin: auto; /* 중앙 정렬 */
+  }
+
+  .ManagerUpdateStudySetting-SeatButtons {
+    flex-direction: column; /* 열 방향으로 정렬 */
+    gap: 1rem; /* 버튼 사이 여백 조정 */
+  }
+
+  .ManagerUpdateStudySetting-SeatButtons button {
+    width: 100%; /* 버튼 너비를 100%로 설정 */
+    height: 3rem;
+  }
+
+  .custom-file-upload {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .ManagerUpdateStudySetting-FloorPlan-Container-Update {
+    display: flex;
+    flex-direction: column; /* 열 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    margin-top: 3rem; /* 위 여백 추가 */
+    margin-bottom: 3rem; /* 아래 여백 추가 */
+    margin-left: auto; /* 좌우 중앙 정렬 */
+    margin-right: auto;
+    width: 80%;
+    height: auto; /* 자동 높이 */
+    border: 0.1rem solid #ccc; /* 테두리 색상 */
+    background-color: #f9f9f9; /* 배경색 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* 상자 그림자 효과 추가 */
+    padding: 1.5rem; /* 안쪽 여백 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    transition: all 0.3s ease-in-out; /* 부드러운 전환 효과 */
+  }
+  .ManagerUpdateStudySetting-SeatText {
+    width: 100%;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+  .ManagerUpdateStudySetting-SeatSection-text {
+    display: flex;
+    text-align: center;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
 }

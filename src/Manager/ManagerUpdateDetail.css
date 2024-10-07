@@ -18,7 +18,6 @@
   display: flex;
   flex-flow: column;
   margin-bottom: 3rem;
-  
 }
 
 .ManagerUpdateDetail-Container-Items input{
@@ -71,7 +70,6 @@
 .ManagerUpdateDetail-Container-Time-Button {
   display: flex;
   justify-content: space-between;
-  
 }
 
 .ManagerUpdateDetail-Container-Time-Button button {
@@ -117,7 +115,6 @@
 /* 드롭다운 컨테이너의 크기를 조정 */
 .react-datepicker-popper {
   width: 41.5rem !important;
-  
 }
 
 /* 드롭다운 리스트 아이템의 크기 조정 */
@@ -160,8 +157,6 @@
   gap: 1.3rem;
   text-align: center;
   justify-content: center;
-  
-  
 }
 
 .ManagerUpdateBasic-Container-Chips-Input button {
@@ -174,14 +169,12 @@
   font-size: 1.3rem;
   border: none;
   text-decoration: none;
- 
 }
 
 .ManagerUpdateDetail-Container-Chips-Button {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .ManagerUpdateDetail-Container-Chips-Button button{
@@ -195,4 +188,53 @@
 
 .hidden {
   display: none;
+}
+
+/* 모바일 스타일 (아이폰 14 프로 맥스, 480px 이하) */
+@media screen and (max-width: 480px) {
+  .ManagerUpdateDetail-Container {
+    margin-left: 0; /* 왼쪽 여백 제거 */
+    margin-top: 0px; /* 전체 콘텐츠를 아래로 내리기 위한 여백 추가 (소폭 증가) */
+  }
+
+  .ManagerUpdateDetail-Container-Items {
+    width: 100%; /* 너비를 100%로 조정 */
+    margin-top: 60px; /* 아이템 간격 조정 (소폭 증가) */
+  }
+
+  .ManagerUpdateDetail-Container-Time,
+  .ManagerUpdateDetail-Container-Chips {
+    padding: 1rem; /* 패딩을 줄여서 여백을 조정 */
+    margin-top: 60px; /* 각 섹션 위쪽 간격 추가 (소폭 증가) */
+  }
+
+  .ManagerUpdateDetail-Container-Time-Text h2 {
+    width: auto; /* 너비 자동 조정 */
+    font-size: 1.5rem; /* 폰트 크기 조정 */
+  }
+
+  .ManagerUpdateDetail-Container-Time-labeling,
+  .ManagerUpdateDetail-Container-Chips-labeling h2 {
+    font-size: 1.2rem; /* 폰트 크기 조정 */
+  }
+
+  .ManagerUpdateBasic-Container-Time-Input {
+    text-align: left; /* 텍스트 정렬을 왼쪽으로 변경 */
+    width: 100%; /* 입력 필드의 너비를 100%로 조정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함하도록 설정 */
+  }
+
+  .ManagerUpdateBasic-Container-DatePicker {
+    width: 100%; /* 너비를 100%로 조정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함하도록 설정 */
+  }
+
+  .ManagerUpdateBasic-Container-Chips-Input {
+    grid-template-columns: 1fr; /* 한 열로 표시 */
+    margin-top: 60px; /* 버튼 간격 조정 (소폭 증가) */
+  }
+
+  .ManagerUpdateBasic-Container-Chips-Input button {
+    width: 100%; /* 버튼 너비를 100%로 조정 */
+  }
 }

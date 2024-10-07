@@ -83,3 +83,70 @@
   font-size: 1.4rem;
   color: #a4a4a4;
 }
+
+/* 아이폰 14 프로 맥스 및 비슷한 해상도 기준 (최대 너비 480px) */
+@media screen and (max-width: 480px) {
+  .reservation-item {
+    flex-direction: column; /* 아이템을 세로로 배치 */
+    height: auto; /* 높이 자동 조정 */
+    padding: 10px;
+    box-shadow: none; /* 그림자 제거 */
+    margin: 5px; /* 여백 축소 */
+  }
+
+  .reservation-name {
+    font-size: 20px; /* 폰트 크기 조정 */
+    padding: 10px 0; /* 위아래 여백 조정 */
+    margin-left: 0; /* 왼쪽 여백 제거 */
+  }
+
+  .reservation-info {
+    margin-left: 0; /* 왼쪽 여백 제거 */
+    font-size: 16px; /* 폰트 크기 축소 */
+  }
+
+  .reservation-info div {
+    margin-top: 3px; /* 여백 축소 */
+  }
+
+  .reservation-button {
+    flex-direction: row; /* 버튼을 가로로 배치 */
+    justify-content: space-around; /* 버튼 간격 조정 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+    margin-top: 10px; /* 위쪽 여백 추가 */
+  }
+
+  .reservation-button button {
+    padding: 8px 16px; /* 버튼 패딩 축소 */
+    font-size: 14px; /* 버튼 폰트 크기 조정 */
+  }
+
+  .reservation-no-exist {
+    font-size: 20px; /* 폰트 크기 조정 */
+    margin: 5rem; /* 여백 축소 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+  }
+
+  .pagination {
+    margin-top: 20px; /* 상단 여백 축소 */
+  }
+
+  ul.pagination li {
+    width: 25px; /* 페이지 번호 크기 축소 */
+    height: 25px; /* 페이지 번호 높이 축소 */
+    font-size: 0.9rem; /* 폰트 크기 축소 */
+  }
+
+  .loading-list {
+    margin-top: 10rem; /* 로딩 메시지 위치 조정 */
+  }
+
+  .loading-list p {
+    font-size: 1.2rem; /* 폰트 크기 축소 */
+  }
+
+  .page-selection {
+    width: 40px; /* 선택 창 너비 축소 */
+    height: 25px; /* 선택 창 높이 축소 */
+  }
+}
