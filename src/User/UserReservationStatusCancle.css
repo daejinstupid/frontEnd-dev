@@ -35,6 +35,7 @@
 .status_cancle_text h2 {
   color: #ccc;
   margin: 50px auto;
+  margin-top: -70px;
 }
 
 /* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */

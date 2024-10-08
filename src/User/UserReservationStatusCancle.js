@@ -31,9 +31,10 @@ const UserReservationStatusCancle = () => {
           <h1>
             죄송합니다.
             <br />
-            <br />
             {cancleReason.cancleContent}
           </h1>
+          <br></br>
+          <br></br>
           <h2>카페 전화번호 : {cancleReason.cafeTel}</h2>
         </div>
       </div>
