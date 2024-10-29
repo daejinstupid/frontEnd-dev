@@ -90,12 +90,6 @@ const UserSearchInput = ({
   const handleCloseComponent = () => {
     onClose();
   };
-  // const handleCafeTypeChange = (event) => {
-  //   setSearchFilterData((prevData) => ({
-  //     ...prevData,
-  //     cafeType: event.target.value,
-  //   }));
-  // };
 
   const toggleUserSearchCafeInfo = () => {
     setShowInfo(!showInfo);
@@ -106,7 +100,7 @@ const UserSearchInput = ({
     const selectedCafe = displayedResults.find(
       (cafe) => cafe.cafeId === cafeId
     );
-    setSelectedCafeId(cafeId); // 선택된 카페의 ID 설정
+    setSelectedCafeId(cafeId);
     if (selectedCafe) {
       if (
         selectedCafe.latitude !== userLocation.lat ||
@@ -126,26 +120,34 @@ const UserSearchInput = ({
   const handleCafeTypeChange = (event) => {
     setCafeType(event.target.value);
   };
+
   const handleSearchClick = () => {
-    searchFilter(1); // 현재 페이지 번호로 데이터 요청
+    searchFilter(1);
   };
 
   const handlePageChange = (newPage) => {
     if (!parentResults) {
       setCurrentPage(newPage);
-      searchFilter(newPage); // 새 페이지에 대한 검색 결과 업데이트
+      searchFilter(newPage);
     }
   };
 
   useEffect(() => {
     if (searchResults && searchResults.length > 0) {
-      setDisplayedResults(searchResults);
+      const uniqueResults = filterUniqueResults(searchResults);
+      setDisplayedResults(uniqueResults);
       setParentResults(true);
       setTotalPages(0);
     } else {
       setParentResults(false);
     }
   }, [searchResults]);
+
+  const filterUniqueResults = (results) => {
+    const unique = new Map();
+    results.forEach((item) => unique.set(item.cafeId, item));
+    return Array.from(unique.values());
+  };
 
   const searchFilter = async (page = currentPage) => {
     setLoading(true);
@@ -172,13 +174,14 @@ const UserSearchInput = ({
 
     try {
       const response = await filterSearch(filterQueryData);
-      setApiResponseData(response.data.data.searchCafes);
-      onDataReceivedFromChild(response.data.data.searchCafes);
+      const uniqueResults = filterUniqueResults(response.data.data.searchCafes);
+      setApiResponseData(uniqueResults);
+      onDataReceivedFromChild(uniqueResults);
       setParentResults(null);
       if (response.data.data.pager) {
         setTotalPages(response.data.data.pager.totalPageNo);
       }
-      if (response.data.data.searchCafes.length === 0) {
+      if (uniqueResults.length === 0) {
         setDisplayedResults([]);
       }
     } catch (error) {

@@ -115,11 +115,11 @@ function ManagerUpdateDetail() {
 
   try {
     const features = {
-      "comfortableSeats": selectedChips.has("24시간"),
-      "hasDesserts": selectedChips.has("1인실"),
-      "quiet": selectedChips.has("세미나실"),
-      "noMusic": selectedChips.has("베이커리"),
-      "sentimental": selectedChips.has("주차여부"),
+      "everyhour": selectedChips.has("24시간"),
+      "roomforones": selectedChips.has("1인실"),
+      "seminar": selectedChips.has("세미나실"),
+      "bakery": selectedChips.has("베이커리"),
+      "parkinglot": selectedChips.has("주차여부"),
       "hasPowerOutlets": selectedChips.has("콘센트")
     };
 

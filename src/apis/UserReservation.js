@@ -15,8 +15,8 @@ export function createReservation(reservationData) {
 export function reservationNow(reservationId) {
   return axios.get(`/user/reservation/now/${reservationId}`);
 }
-export function reservationCancle(reservationId) {
-  return axios.get(`/user/reservation/now/cancle/${reservationId}`);
+export function reservationCancel(reservationId) {
+  return axios.get(`/user/reservation/now/cancel/${reservationId}`);
 }
 export function reservationProgress() {
   return axios.get("/user/reservation/list/state");

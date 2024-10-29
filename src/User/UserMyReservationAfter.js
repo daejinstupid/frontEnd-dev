@@ -9,7 +9,7 @@ const UserMyReservationAfter = () => {
   const [reservationAfter, setReservationAfter] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
-  const [cancleReservationId, setCancleReservationId] = useState("");
+  const [cancelReservationId, setcancelReservationId] = useState("");
   const [loading, setLoading] = useState(true);
   const [showReviewModal, setShowReviewModal] = useState(false); // 모달 창 상태
   const [rating, setRating] = useState(0); // 현재 선택한 별점
@@ -55,7 +55,7 @@ const UserMyReservationAfter = () => {
         setLoading(true);
         const response = await reservationFinish();
         setReservationAfter(response.data.data);
-        setCancleReservationId(response.data.data.reservationIds);
+        setcancelReservationId(response.data.data.reservationIds);
       } catch (error) {
         console.error("error : ", error);
       } finally {
@@ -105,10 +105,10 @@ const UserMyReservationAfter = () => {
                         </div>
                       )}
                       {reservation.state === "N" && (
-                        <div className="user_reservation_cancle">
+                        <div className="user_reservation_cancel">
                           <h4>취소</h4>
                           <Link
-                            to={`/user/reservationstatus/cancle/${reservation.reservationIds[0]}`}
+                            to={`/user/reservationstatus/cancel/${reservation.reservationIds[0]}`}
                           >
                             <button>사유 확인</button>
                           </Link>

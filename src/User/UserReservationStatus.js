@@ -45,7 +45,7 @@ const UserReservationStatus = () => {
       clearInterval(interval);
     }
     if (reservationStatus.status === "N") {
-      navigate(`/user/reservationstatus/cancle/${reservationId}`);
+      navigate(`/user/reservationstatus/cancel/${reservationId}`);
     }
     if (reservationStatus.reservationId === "undefined") {
       alert("예약하신 정보가 없습니다");
