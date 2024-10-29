@@ -3,7 +3,7 @@
   src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
 }
 
-.status_cancle_form {
+.status_cancel_form {
   width: 100%;
   height: 70vh;
   display: flex;
@@ -13,26 +13,26 @@
   font-family: "HakgyoansimSantteutdotumL";
 }
 
-.status_cancle_img {
+.status_cancel_img {
   text-align: center;
   margin: 0 auto;
   width: 40%;
   margin-top: 30px;
 }
 
-.status_cancle_img img {
+.status_cancel_img img {
   width: 40%;
 }
 
-.status_cancle_text {
+.status_cancel_text {
   margin-top: -70px;
 }
 
-.status_cancle_text span {
+.status_cancel_text span {
   color: red;
 }
 
-.status_cancle_text h2 {
+.status_cancel_text h2 {
   color: #ccc;
   margin: 50px auto;
   margin-top: -70px;
@@ -40,21 +40,21 @@
 
 /* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
 @media screen and (max-width: 768px) {
-  .status_cancle_form {
+  .status_cancel_form {
     height: auto; /* 높이를 자동으로 조정 */
     padding: 20px;
   }
 
-  .status_cancle_img {
+  .status_cancel_img {
     width: 60%; /* 이미지 컨테이너 너비 조정 */
     margin-top: 20px;
   }
 
-  .status_cancle_img img {
+  .status_cancel_img img {
     width: 70%; /* 이미지 크기 조정 */
   }
 
-  .status_cancle_text h2 {
+  .status_cancel_text h2 {
     font-size: 150%; /* 텍스트 크기 조정 */
     margin: 30px auto;
   }
@@ -62,24 +62,24 @@
 
 /* 더 작은 화면: 화면 너비가 480px 이하일 때 */
 @media screen and (max-width: 480px) {
-  .status_cancle_form {
+  .status_cancel_form {
     padding: 15px;
   }
 
-  .status_cancle_img {
+  .status_cancel_img {
     width: 80%; /* 더 작은 화면에서 이미지 컨테이너 확대 */
   }
 
-  .status_cancle_img img {
+  .status_cancel_img img {
     width: 80%; /* 이미지 크기 조정 */
   }
 
-  .status_cancle_text h2 {
+  .status_cancel_text h2 {
     font-size: 130%; /* 텍스트 크기를 더 줄임 */
     margin: 20px auto;
   }
 
-  .status_cancle_text span {
+  .status_cancel_text span {
     font-size: 120%; /* 강조 텍스트 크기 조정 */
   }
 }

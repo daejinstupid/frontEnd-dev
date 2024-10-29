@@ -15,8 +15,8 @@ export function managerChangeConfirm(data) {
   return axios.patch("/manager/reservation/confirm", data);
 }
 
-export function managerChangeCancle(data){
-  return axios.patch("/manager/reservation/cancle", data);
+export function managerChangeCancel(data){
+  return axios.patch("/manager/reservation/cancel", data);
 }
 
 export function managerChangeFinish(data){

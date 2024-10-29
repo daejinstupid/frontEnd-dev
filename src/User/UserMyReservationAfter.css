@@ -80,7 +80,7 @@
   margin-top: 10px;
 }
 
-.user_reservation_cancle {
+.user_reservation_cancel {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -89,13 +89,13 @@
   margin-top : -40px;
 }
 
-.user_reservation_cancle h4 {
+.user_reservation_cancel h4 {
   font-size: 150%;
   width: 100%;
   margin-top: 20px;
 }
 
-.user_reservation_cancle button,
+.user_reservation_cancel button,
 .user_reservation_finish button {
   width: 100%;
   height: 30px;
@@ -107,7 +107,7 @@
   cursor: pointer; /* 마우스 커서 포인터 */
 }
 
-.user_reservation_cancle button:hover,
+.user_reservation_cancel button:hover,
 .user_reservation_finish button:hover {
   background-color: #bbb; /* 호버 시 색상 변경 */
 }
@@ -266,7 +266,7 @@
   }
 
   .user_reservation_finish h4,
-  .user_reservation_cancle h4 {
+  .user_reservation_cancel h4 {
     font-size: 110%; /* 폰트 크기 더 작게 */
   }
 
