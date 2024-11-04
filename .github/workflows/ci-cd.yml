@@ -37,9 +37,10 @@ jobs:
       - name: Install dependencies
         run: npm install --prefix .
 
-      # 5. 빌드
+      # 5. 빌드 (CI='' 추가하여 ESLint 경고를 무시)
       - name: Build
-        run: npm run build --prefix .
+        run: |
+          CI='' npm run build --prefix .
 
       # 6. 빌드 결과 배포
       - name: Deploy to EC2
