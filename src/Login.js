@@ -2,7 +2,6 @@ import React, { useCallback, useContext, useState } from "react";
 import "./Login.css";
 import Header from "./Header";
 import { Link, useNavigate } from "react-router-dom";
-import ManagerNav from "./Manager/ManagerNav";
 import AppContext from "./AppContext";
 import { addAuthHeader, removeAuthHeader } from "./apis/axiosConfig";
 import { login } from "./apis/login";
@@ -10,10 +9,6 @@ import Swal from "sweetalert2";
 
 function Login() {
   const navigate = useNavigate();
-
-  const register = (event) => {
-    navigate("/register");
-  };
 
   const [user, setUser] = useState({
     userName: "",
@@ -34,96 +29,81 @@ function Login() {
         if (user.userName === "" && user.password === "") {
           Swal.fire({
             icon: "warning",
-            title: "",
             text: "아이디와 패스워드를 입력하여 주시기 바랍니다.",
-
-            confirmButton: true,
             confirmButtonText: "확인",
             confirmButtonColor: "#FFCD4A",
-            customClass: {
-              confirmButton: "no-outline",
-            },
           });
         } else if (user.userName === "") {
           Swal.fire({
             icon: "warning",
-            title: "",
             text: "아이디를 입력하여 주시기 바랍니다.",
-
-            confirmButton: true,
             confirmButtonText: "확인",
             confirmButtonColor: "#FFCD4A",
-            customClass: {
-              confirmButton: 'no-outline',
-            }
-        })
-        }
-        else if(user.password === ""){
-          
-            Swal.fire({
-              icon: "warning",
-              title: "",
-              text: `비밀번호를 입력하여 주시기 바랍니다.`,
-              
-              confirmButton: true,
-              confirmButtonText: "확인",
-              confirmButtonColor: "#FFCD4A",
-              customClass: {
-                confirmButton: 'no-outline',
-              }
-          })
-        }
-        else{
-          //로그인 요청
+          });
+        } else if (user.password === "") {
+          Swal.fire({
+            icon: "warning",
+            text: "비밀번호를 입력하여 주시기 바랍니다.",
+            confirmButtonText: "확인",
+            confirmButtonColor: "#FFCD4A",
+          });
+        } else {
+          // 로그인 요청
           const response = await login(user);
 
-          //요청 공통 헤더인 Authorization 추가
-          addAuthHeader(response.data.data.accessToken);
+          // 응답 데이터 구조 확인
+          const data = response.data?.data;
+          if (data) {
+            // 요청 공통 헤더에 Authorization 추가
+            addAuthHeader(data.accessToken);
 
-          //Context에 인증 내용 저장
-          appContext.setUser(response.data.data.userName);
-          appContext.setAccessToken(response.data.data.accessToken);
-          appContext.setRole(response.data.data.role);
+            // Context에 인증 내용 저장
+            appContext.setUser(data.userName);
+            appContext.setAccessToken(data.accessToken);
+            appContext.setRole(data.role);
 
-          //상태 재초기화
-          setUser({
-            userName: "",
-            password: "",
-          });
+            // 상태 초기화
+            setUser({
+              userName: "",
+              password: "",
+            });
 
-          if (response.data.data.role === "ROLE_MANAGER") {
-            navigate("/manager");
+            // 역할에 따라 페이지 이동
+            if (data.role === "ROLE_MANAGER") {
+              navigate("/manager");
+            } else {
+              navigate("/user");
+            }
           } else {
-            navigate("/user");
+            // 서버 응답이 예상한 데이터 구조가 아닐 경우 처리
+            Swal.fire({
+              icon: "error",
+              title: "오류",
+              text: "로그인에 실패하였습니다. 다시 시도해주세요.",
+              confirmButtonText: "확인",
+              confirmButtonColor: "#FFCD4A",
+            });
           }
         }
       } catch (error) {
-        console.log(error.response.data.isSuccess);
-        if(error.response.data.code === 3002){
-          Swal.fire({
-            icon: "warning",
-            title: "",
-            text: error.response.data.message,
-            
-            confirmButton: true,
-            confirmButtonText: "확인",
-            confirmButtonColor: "#FFCD4A",
-            customClass: {
-              confirmButton: 'no-outline',
-            }
-        })
-          
-        }
+        console.error(error);
+        Swal.fire({
+          icon: "error",
+          title: "오류",
+          text: error.response?.data?.message || "로그인 중 오류가 발생했습니다.",
+          confirmButtonText: "확인",
+          confirmButtonColor: "#FFCD4A",
+        });
       }
     },
     [appContext, user]
   );
 
   const handleLogout = (event) => {
-    //요청 공통 헤더인 Authorization 제거
+    // 요청 공통 헤더에서 Authorization 제거
     removeAuthHeader();
 
-    //Context에 인증 내용 제거
+    // Context에서 인증 내용 제거
     appContext.setUser("");
     appContext.setAccessToken("");
     appContext.setRole("");
