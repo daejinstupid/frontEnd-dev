@@ -13,10 +13,8 @@ const ManagerCancelReservationStats = () => {
     const [stats, setStats] = useState([]);
 
     useEffect(() => {
-        // 카페 ID에 따라 취소 사유 통계를 가져오는 API 호출
         axios.get(`/manager/cancelreservationstats/${cafeId}`) // axiosConfig.js에서 설정한 baseURL을 사용
             .then((response) => {
-                console.log(response.data); // 데이터 확인
                 setStats(response.data);
             })
             .catch((error) => {
@@ -26,11 +24,11 @@ const ManagerCancelReservationStats = () => {
 
     // 차트 데이터 준비
     const chartData = {
-        labels: stats.length > 0 ? stats.map(stat => stat.cancelContent) : ['데이터 없음'],
+        labels: stats.map(stat => stat.cancelContent),
         datasets: [
             {
                 label: "취소 횟수",
-                data: stats.length > 0 ? stats.map(stat => stat.cancelCount) : [0],
+                data: stats.map(stat => stat.cancelCount),
                 backgroundColor: [
                     "#FF6384",
                     "#36A2EB",
@@ -56,7 +54,7 @@ const ManagerCancelReservationStats = () => {
             <ManagerNav />
             <div>
                 <h2>취소 사유 통계</h2>
-                <div style={{ width: "50%", height: "400px", margin: "0 auto" }}>
+                <div style={{ width: "50%", margin: "0 auto" }}>
                     <Pie data={chartData} />
                 </div>
             </div>
