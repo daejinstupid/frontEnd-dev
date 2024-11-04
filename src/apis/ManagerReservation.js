@@ -1,10 +1,7 @@
 import axios from "axios";
 
-// 현재 호스트 이름에 따라 baseURL 설정
-const isProduction = window.location.hostname === "www.cafein.store";
-
-axios.defaults.baseURL = isProduction ? "http://www.cafein.store" : "http://localhost:8080/";
-
+// 환경 변수에서 baseURL을 설정
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 export function managerReadProgress() {
   return axios.get("/manager/reservation/read/ing");
