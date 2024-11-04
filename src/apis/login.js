@@ -1,20 +1,18 @@
 import axios from "axios";
 
-// 환경 변수에서 baseURL을 설정
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+// 현재 호스트 이름에 따라 baseURL 설정
+const isProduction = window.location.hostname === "www.cafein.store";
 
-// 로그인 함수
+axios.defaults.baseURL = isProduction ? "http://www.cafein.store" : "http://localhost:8080/";
+
 export function login(user) {
   return axios.post("/login", user);
 }
 
-
-// 회원가입 함수
 export function signup(user) {
   return axios.post("/signup", user);
 }
 
-// 아이디 중복 확인 함수
 export function idCheck(id) {
   return axios.get(`/check/userName/dup/${id}`);
 }
