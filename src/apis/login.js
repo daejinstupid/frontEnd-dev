@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// 환경 변수에서 baseURL을 설정
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+// 현재 호스트 이름에 따라 baseURL 설정
+const isProduction = window.location.hostname === "www.cafein.store";
+axios.defaults.baseURL = isProduction ? "https://www.cafein.store" : "http://localhost:8080";
 
 // 로그인 함수
 export function login(user) {
