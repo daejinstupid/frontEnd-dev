@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-axios.defaults.baseURL = "http://www.cafein.store/";
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 export function login(user) {
   return axios.post("/login", user);

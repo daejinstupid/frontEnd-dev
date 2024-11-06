@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-axios.defaults.baseURL = "http://www.cafein.store/";
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 /* Basic 업데이트 */
 export function managerBasicRead() {
