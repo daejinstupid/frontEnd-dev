@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://www.cafein.store/";
+axios.defaults.baseURL = "http://www.cafein.store/";
 
 export function addAuthHeader(accessToken) {
   axios.defaults.headers.common["Authorization"] = "Bearer "+accessToken;

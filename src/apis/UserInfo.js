@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://www.cafein.store/";
+axios.defaults.baseURL = "http://www.cafein.store/";
 
 export function checkPassword(password) {
   return axios.post("/user/check/password", { password });

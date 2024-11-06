@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-axios.defaults.baseURL = "https://www.cafein.store/";
+axios.defaults.baseURL = "http://www.cafein.store/";
 
 export function readTableList(cafeId) {
   return axios.get(`/user/reservation/cafe/${cafeId}`);
