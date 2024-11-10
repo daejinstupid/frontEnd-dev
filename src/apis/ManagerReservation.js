@@ -19,6 +19,11 @@ export function managerChangeCancel(data){
   return axios.patch("/manager/reservation/cancel", data);
 }
 
+// 예약 거절 함수 (예약 전 거절)
+export function managerChangeReject(data) {
+  return axios.patch("/manager/reservation/reject", data);
+}
+
 export function managerChangeFinish(data){
   return axios.patch("/manager/reservation/finish", data);
 }
