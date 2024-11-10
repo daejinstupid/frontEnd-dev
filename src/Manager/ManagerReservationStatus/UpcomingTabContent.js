@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import ReactPaginate from 'react-js-pagination';
 import "./StatusTabContent.css";
-import CancelModal from "./CancelModal";
+import RejectModal from "./RejectModal";
 import ConfirmModal from "./ConfirmModal";
-import { managerChangeCancel, managerChangeConfirm, managerReadUpcoming } from "../../apis/ManagerReservation";
+import { managerChangeReject, managerChangeConfirm, managerReadUpcoming } from "../../apis/ManagerReservation";
 import Swal from "sweetalert2";
 import { PulseLoader } from "react-spinners";
 
 const UpcomingTabContent = () => {
   const [upcomingRevInfo, setUpcomingRevInfo] = useState(null);
-  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
-  const [cancelReservationIds, setCancelReservationIds] = useState([]);
+  const [isRejectModalOpen, setIsRejectModalOpen] = useState(false);
+  const [rejectReservationIds, setRejectReservationIds] = useState([]);
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   const [confirmReservationIds, setConfirmReservationIds] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,22 +32,22 @@ const UpcomingTabContent = () => {
     }
   };
 
-  const handleOpenCancelModal = (reservation) => {
-    setIsCancelModalOpen(true);
-    setCancelReservationIds(reservation.reservationIds);
+  const handleOpenRejectModal = (reservation) => {
+    setIsRejectModalOpen(true);
+    setRejectReservationIds(reservation.reservationIds);
   };
 
-  const handleCloseCancelModal = () => {
-    setIsCancelModalOpen(false);
+  const handleCloseRejectModal = () => {
+    setIsRejectModalOpen(false);
   };
 
-  const handleCancelConfirm = async (reservationIds, reasonId) => {
+  const handleRejectConfirm = async (reservationIds, reasonId) => {
     try {
-      await managerChangeCancel({ reservationIds: cancelReservationIds, cancelReasonId: reasonId });
+      await managerChangeReject({ reservationIds: rejectReservationIds, rejectReasonId: reasonId });
       Swal.fire({
         icon: "success",
         title: "",
-        text: "예약 취소가 완료되었습니다.",
+        text: "예약 거절이 완료되었습니다.",
         confirmButtonText: "확인",
         confirmButtonColor: "#FFCD4A",
         customClass: {
@@ -61,7 +61,7 @@ const UpcomingTabContent = () => {
     } catch (error) {
       console.error(error);
     }
-    handleCloseCancelModal();
+    handleCloseRejectModal();
   };
 
   const handleOpenConfirmModal = (reservation) => {
@@ -150,7 +150,7 @@ const UpcomingTabContent = () => {
                               </div>
                               <div className="reservation-button">
                                 <button onClick={() => handleOpenConfirmModal(reservation)}>예약 확정</button>
-                                <button onClick={() => handleOpenCancelModal(reservation)}>예약 취소</button>
+                                <button onClick={() => handleOpenRejectModal(reservation)}>예약 거절</button>
                               </div>
                             </div>
                         ))
@@ -178,13 +178,13 @@ const UpcomingTabContent = () => {
                         />
                     )}
 
-                    {isCancelModalOpen && <div className="backdrop"></div>}
-                    {isCancelModalOpen && (
-                        <CancelModal
-                            isOpen={isCancelModalOpen}
-                            onClose={handleCloseCancelModal}
-                            onConfirm={handleCancelConfirm}
-                            reservationIds={cancelReservationIds}
+                    {isRejectModalOpen && <div className="backdrop"></div>}
+                    {isRejectModalOpen && (
+                        <RejectModal
+                            isOpen={isRejectModalOpen}
+                            onClose={handleCloseRejectModal}
+                            onConfirm={handleRejectConfirm}
+                            reservationIds={rejectReservationIds}
                         />
                     )}
                   </>

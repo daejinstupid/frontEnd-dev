@@ -87,9 +87,10 @@ const ManagerNav = () => {
                         <Link to="/manager/reservationlist">
                             <p>날짜 별 예약 조회</p>
                         </Link>
-                        <button onClick={handleCancelReasonClick}>
-                            <p>취소 사유 통계</p>
-                        </button>
+                        {/* 취소사유통계 기능 비활성화 */}
+                        {/* <button onClick={handleCancelReasonClick}> */}
+                            {/* <p>취소 사유 통계</p> */}
+                        { /* </button>  */} 
                     </div>
                 )}
             </div>
