@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://www.cafein.store/";
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 export function addAuthHeader(accessToken) {
   axios.defaults.headers.common["Authorization"] = "Bearer "+accessToken;

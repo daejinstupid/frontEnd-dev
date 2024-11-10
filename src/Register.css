@@ -1,3 +1,4 @@
+/* 기존 코드 */
 @font-face {
     font-family: "HakgyoansimSantteutdotumL";
     src: url("/src/fonts/HakgyoansimSantteutdotumL.ttf") format("truetype");
@@ -25,7 +26,7 @@
     color: white;
     font-size: 2rem;
     position: absolute;
-    top: 130px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -41,9 +42,9 @@
 .register-box {
     display: flex;
     position: absolute;
-    top: 210px;
+    top: 150px;
     width: 27rem;
-    height: 28rem;
+    height: 40rem;
     background-color: #f5f5f5;
     padding: 1.5rem;
     opacity: 0.97;
@@ -170,7 +171,38 @@ input[type="radio"] {
     color: red;
 }
 
-/* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 */
+/* 약관 및 체크박스 추가 스타일 */
+/* 이용 약관 섹션 */
+.terms-section {
+    margin-top: 1rem;
+    font-family: "HakgyoansimSantteutdotumL";
+}
+
+/* 약관 내용 상자 (스크롤 가능) */
+.terms-box {
+    height: 6rem;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 약관 체크박스 */
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* 회원가입 버튼 - 이용 약관 미동의 시 비활성화 스타일 */
+.register-button button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* 반응형 미디어 쿼리 */
 @media screen and (max-width: 768px) {
     .register-box {
         width: 22rem;
@@ -197,18 +229,17 @@ input[type="radio"] {
     }
 }
 
-/* 더 작은 화면: 화면 너비가 480px 이하일 때 */
 @media screen and (max-width: 480px) {
     .register-box {
         width: 18rem;
-        top: 300px; /* 로그인 박스 아래쪽으로 위치 조정 */
+        top: 300px;
         height: auto;
         padding: 1rem;
     }
 
     .register-title {
         font-size: 1.2rem;
-        top: 150px; /* 타이틀 위치 조정 */
+        top: 150px;
     }
 
     .register-intro {
@@ -229,70 +260,67 @@ input[type="radio"] {
         margin-left: 2rem;
     }
 
-    /* 아이폰 14 Pro Max 크기: 430px 이하일 때 */
-@media screen and (max-width: 430px) {
+    @media screen and (max-width: 430px) {
     .register-box {
-        width: 20rem; /* 등록 박스 너비 조정 */
-        top: 300px; /* 박스를 더 아래로 위치 조정 */
-        height: auto; /* 높이 자동 조정 */
-        padding: 1.2rem; /* 박스 안쪽 패딩 조정 */
+        width: 20rem;
+        top: 300px;
+        height: auto;
+        padding: 1.2rem;
     }
 
     .register-title {
-        font-size: 1.3rem; /* 타이틀 폰트 크기 조정 */
-        top: 150px; /* 타이틀 위치 아래로 조정 */
+        font-size: 1.3rem;
+        top: 150px;
     }
 
     .register-intro {
-        font-size: 1rem; /* 소개 텍스트 폰트 크기 조정 */
-        margin-left: 2rem; /* 좌측 여백 조정 */
+        font-size: 1rem;
+        margin-left: 2rem;
     }
 
     .id-section {
-        margin-top: 1.5rem; /* 상단 여백 추가 */
-        margin-bottom: 1.5rem; /* 하단 여백 추가 */
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .id-section input {
-        font-size: 0.9rem; /* 입력 필드 폰트 크기 조정 */
-        padding: 0.05rem; /* 입력 필드 패딩 조정 */
+        font-size: 0.9rem;
+        padding: 0.05rem;
     }
 
     .id-section button, .id-signin-error button {
         width: 4rem;
         height: 1.4rem;
-        font-size: 0.75rem; /* 버튼 텍스트 크기 조정 */
-        margin-left: 15rem; /* 버튼의 위치 조정 */
+        font-size: 0.75rem;
+        margin-left: 15rem;
     }
 
     .register-radio {
-        flex-direction: column; /* 수직 정렬로 변경 */
-        align-items: flex-start; /* 왼쪽 정렬 */
-        font-size: 0.9rem; /* 폰트 크기 조정 */
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9rem;
     }
 
     .register-radio label {
-        margin-right: 1.5rem; /* 라벨 여백 줄이기 */
+        margin-right: 1.5rem;
     }
 
     .register-radio-button {
-        margin: 0.3rem 0.5rem; /* 라디오 버튼 간격 조정 */
+        margin: 0.3rem 0.5rem;
     }
 
     .register-button {
-        margin-top: 2rem; /* 상단 여백 추가 */
+        margin-top: 2rem;
     }
 
     .register-button button {
-        width: 9rem; /* 버튼 너비 조정 */
-        font-size: 0.9rem; /* 버튼 폰트 크기 조정 */
+        width: 9rem;
+        font-size: 0.9rem;
     }
 
     .go-login-section {
-        margin-left: 2rem; /* 로그인 섹션 좌측 여백 조정 */
-        margin-top: 2rem; /* 상단 여백 추가 */
+        margin-left: 2rem;
+        margin-top: 2rem;
     }
+  }
 }
-
-}
-
