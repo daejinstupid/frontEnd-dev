@@ -2,18 +2,19 @@ import "./UserMyReservationAfter.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-js-pagination";
-import { reservationFinish } from "../apis/UserReservation";
+import { reservationFinish, submitReview } from "../apis/UserReservation";
 import { PulseLoader } from "react-spinners";
 
 const UserMyReservationAfter = () => {
   const [reservationAfter, setReservationAfter] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
-  const [cancelReservationId, setcancelReservationId] = useState("");
+  const [selectedReservationId, setSelectedReservationId] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showReviewModal, setShowReviewModal] = useState(false); // 모달 창 상태
-  const [rating, setRating] = useState(0); // 현재 선택한 별점
-  const [reviewButtonText, setReviewButtonText] = useState("별점주기"); // 후기 작성 버튼 텍스트
+  const [showReviewModal, setShowReviewModal] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [reviewText, setReviewText] = useState("");
+  const maxReviewLength = 50;
 
   const paginate = (data) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -24,29 +25,61 @@ const UserMyReservationAfter = () => {
     setCurrentPage(pageNumber);
   };
 
-  // 별점 클릭 시 처리
   const handleStarClick = (index, e) => {
-    const starWidth = e.currentTarget.offsetWidth; // 별의 너비
-    const clickPosition = e.clientX - e.currentTarget.getBoundingClientRect().left; // 클릭한 위치
-    const percentage = (clickPosition / starWidth) * 100; // 클릭한 위치 비율
+    const starWidth = e.currentTarget.offsetWidth;
+    const clickPosition = e.clientX - e.currentTarget.getBoundingClientRect().left;
+    const percentage = (clickPosition / starWidth) * 100;
 
     if (percentage < 50) {
-      // 왼쪽 클릭: 반개씩 추가
-      setRating((prev) => Math.min(index + 0.5, 5)); // 최대 5개 별점으로 제한
+      setRating((prev) => Math.min(index + 0.5, 5));
     } else {
-      // 오른쪽 클릭: 꽉 채우기
-      setRating((prev) => index + 1); // 현재 클릭한 별까지 꽉 채우기
+      setRating((prev) => index + 1);
     }
   };
 
   const closeModal = () => {
     setShowReviewModal(false);
-    setRating(0); // 모달 닫을 때 별점 초기화
+    setRating(0);
+    setReviewText("");
+    setSelectedReservationId(null);
   };
 
-  const handleCompleteClick = () => {
-    setReviewButtonText(`다시주기 (${rating}점)`); // 버튼 텍스트 업데이트
-    closeModal(); // 모달 닫기
+  const handleReviewChange = (e) => {
+    const value = e.target.value;
+    if (value.length <= maxReviewLength) {
+      setReviewText(value);
+    }
+  };
+
+  const handleCompleteClick = async () => {
+    if (!selectedReservationId) {
+      alert("예약 ID가 설정되지 않았습니다.");
+      return;
+    }
+
+    if (rating === 0 || reviewText.trim() === "") {
+      alert("별점과 리뷰를 작성해주세요.");
+      return;
+    }
+
+    try {
+      console.log("Reservation ID:", selectedReservationId);
+      await submitReview(selectedReservationId, reviewText, rating);
+      alert("리뷰가 저장되었습니다.");
+
+      closeModal();
+    window.location.reload();
+
+      const updatedReservations = reservationAfter.map((res) =>
+        res.reservationIds.includes(selectedReservationId)
+          ? { ...res, hasReview: true }
+          : res
+      );
+      setReservationAfter(updatedReservations);
+    } catch (error) {
+      alert("리뷰 저장에 실패했습니다.");
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -54,10 +87,17 @@ const UserMyReservationAfter = () => {
       try {
         setLoading(true);
         const response = await reservationFinish();
-        setReservationAfter(response.data.data);
-        setcancelReservationId(response.data.data.reservationIds);
+
+        console.log("Reservation data from API:", response.data.data);
+
+        const reservationsWithReviewFlag = response.data.data.map((res) => ({
+          ...res,
+          hasReview: !!res.reviewText,
+        }));
+
+        setReservationAfter(reservationsWithReviewFlag);
       } catch (error) {
-        console.error("error : ", error);
+        console.error("Error fetching reservations:", error);
       } finally {
         setLoading(false);
       }
@@ -75,9 +115,7 @@ const UserMyReservationAfter = () => {
       ) : (
         <div className="user_page">
           {reservationAfter.length === 0 ? (
-            <div className="user_reservation_no_exist">
-              예약 현황이 없습니다.
-            </div>
+            <div className="user_reservation_no_exist">예약 현황이 없습니다.</div>
           ) : (
             <>
               {paginate(reservationAfter).map((reservation, index) => (
@@ -99,8 +137,23 @@ const UserMyReservationAfter = () => {
                       {reservation.state === "F" && (
                         <div className="user_reservation_finish">
                           <h4>완료</h4>
-                          <button onClick={() => setShowReviewModal(true)}>
-                            {reviewButtonText} {/* 버튼 텍스트 */}
+                          <button
+                            onClick={() => {
+                              if (
+                                !reservation.reservationIds ||
+                                reservation.reservationIds.length === 0
+                              ) {
+                                console.error("Reservation ID is missing or empty!");
+                                return;
+                              }
+                              const reservationId = reservation.reservationIds[0];
+                              setSelectedReservationId(reservationId);
+                              setReviewText(reservation.reviewText || "");
+                              setRating(reservation.rating || 0);
+                              setShowReviewModal(true);
+                            }}
+                          >
+                            {reservation.hasReview ? "리뷰 수정" : "리뷰 작성"}
                           </button>
                         </div>
                       )}
@@ -134,29 +187,37 @@ const UserMyReservationAfter = () => {
         </div>
       )}
 
-      {/* 별점 평가 모달 창 */}
       {showReviewModal && (
         <div className="modal">
           <div className="modal-content">
-            <h3>별점주기</h3>
+            <h3>리뷰 작성</h3>
             <div className="star-rating">
               {[...Array(5)].map((_, index) => {
-                let starClass = "star empty"; // 기본적으로 빈 별
+                let starClass = "star empty";
                 if (rating >= index + 1) {
-                  starClass = "star full"; // 꽉 찬 별
+                  starClass = "star full";
                 } else if (rating > index && rating < index + 1) {
-                  starClass = "star half"; // 반 채워진 별
+                  starClass = "star half";
                 }
                 return (
                   <div
                     key={index}
                     className={starClass}
-                    onClick={(e) => handleStarClick(index, e)} // 클릭 이벤트에 이벤트 객체 전달
+                    onClick={(e) => handleStarClick(index, e)}
                   />
                 );
               })}
             </div>
-            <div className="thank-you-message">소중한 별점 감사합니다. ❤️</div>
+            <textarea
+              className="review-textarea"
+              placeholder="리뷰를 작성해주세요."
+              value={reviewText}
+              onChange={handleReviewChange}
+              maxLength={maxReviewLength}
+            ></textarea>
+            <div className="review-char-counter">
+              {reviewText.length} / {maxReviewLength}
+            </div>
             <div className="modal-buttons">
               <div className="button-box">
                 <button className="button" onClick={closeModal}>

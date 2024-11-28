@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./UserSearchCafeInfo.css";
 import { useEffect, useState } from "react";
 import UserCafeInfoSlide from "./UserCafeInfoSlide";
-import { async } from "q";
 import { cafeInfo } from "../apis/Search";
 
 const UserSearchCafeInfo = ({ cafeId, onClose }) => {
@@ -13,6 +12,7 @@ const UserSearchCafeInfo = ({ cafeId, onClose }) => {
     setShowInfo(false);
     onClose();
   };
+
   useEffect(() => {
     const searchCafeIdInfo = async () => {
       try {
@@ -28,6 +28,7 @@ const UserSearchCafeInfo = ({ cafeId, onClose }) => {
     };
     searchCafeIdInfo();
   }, [cafeId]);
+
   return (
     <usersearchcafeinfo>
       <div className="UserSearchCafeInfo_header">
@@ -71,7 +72,9 @@ const UserSearchCafeInfo = ({ cafeId, onClose }) => {
           <p>{showCafeInfo.study === "Y" ? "카공 가능" : "카공 불가능"}</p>
         </div>
       </div>
-      {showCafeInfo.study === "Y" ? (
+
+      {/* 예약하기 버튼 */}
+      {showCafeInfo.study === "Y" && (
         <Link
           to={{
             pathname: `/user/reservation/${cafeId}`,
@@ -82,10 +85,16 @@ const UserSearchCafeInfo = ({ cafeId, onClose }) => {
             <button>예약하기</button>
           </div>
         </Link>
-      ) : (
-        " "
       )}
+
+      {/* 리뷰보기 버튼 */}
+      <div className="go_to_review">
+        <Link to={`/user/reservation/review/${cafeId}`}>
+          <button>리뷰보기</button>
+        </Link>
+      </div>
     </usersearchcafeinfo>
   );
 };
+
 export default UserSearchCafeInfo;

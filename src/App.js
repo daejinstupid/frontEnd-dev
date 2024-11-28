@@ -29,6 +29,9 @@ import UserReservationStatusCancel from "./User/UserReservationStatusCancel";
 import UserInfoUpdate from "./User/UserInfoUpdate";
 import CafeRegister from "./Manager/CafeRegister";
 
+// UserCafeReviewList를 import 추가
+import UserCafeReviewList from "./User/UserCafeReviewList"; // 적절한 경로로 수정
+
 import { addAuthHeader } from "./apis/axiosConfig";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -62,6 +65,7 @@ function App() {
                     <Route path="/manager/updatedetail" element={<ManagerUpdateDetail />} />
                     <Route path="/manager/updatesetting" element={<ManagerUpdateStudySetting />} />
                     <Route path="/manager/update" element={<ManagerUpdate />}>
+
                         <Route index element={<ManagerUpdateBasic />} />
                         <Route path="updatebasic" element={<ManagerUpdateBasic />} />
                         <Route path="updatedetail" element={<ManagerUpdateDetail />} />
@@ -79,6 +83,9 @@ function App() {
                     <Route path="/user/reservationstatus/empty" element={<UserReservationStatusStatusEmpty />} />
                     <Route path="/user/reservationstatus/cancel/:reservationId" element={<UserReservationStatusCancel />} />
                     <Route path="/user/myinfo/update" element={<UserInfoUpdate />} />
+
+                    {/* UserCafeReviews 경로 추가 */}
+                    <Route path="/user/reservation/review/:cafeId" element={<UserCafeReviewList />} />
                 </Route>
             </Routes>
         </BrowserRouter>

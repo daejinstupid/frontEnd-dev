@@ -60,6 +60,27 @@
   border-radius: 10px;
 }
 
+/* 리뷰보기 버튼 스타일 추가 */
+.go_to_review {
+  margin: 20px auto 0; /* 리뷰보기 버튼 상단 여백 추가 */
+  text-align: center;
+}
+
+.go_to_review button {
+  background-color: #4caf50;
+  color: white;
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.go_to_review button:hover {
+  background-color: #45a049;
+}
+
 /* 반응형 미디어 쿼리: 화면 너비가 768px 이하일 때 적용 */
 @media screen and (max-width: 768px) {
   .UserSearchCafeInfo_header img {
@@ -82,7 +103,8 @@
     font-size: 14px; /* 텍스트 크기 줄임 */
   }
 
-  .go_to_reservation button {
+  .go_to_reservation button,
+  .go_to_review button {
     width: 80%; /* 버튼 크기 조정 */
     height: 35px;
   }
@@ -111,13 +133,19 @@
     margin-top: 15px; /* 텍스트 상단 여백 조정 */
   }
 
-  .go_to_reservation button {
+  .go_to_reservation button,
+  .go_to_review button {
     width: 90%;
     height: 30px;
     font-size: 14px; /* 버튼 폰트 크기 줄임 */
   }
 
-  /* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
+  .usersearchcafeinfo_section {
+    margin: 20px 0 80px 5px; /* 섹션 마진 조정 */
+  }
+}
+
+/* 아이폰 14 Pro Max 해상도 (430x932px)에 맞게 반응형 조정 */
 @media screen and (max-width: 430px) {
   .UserSearchCafeInfo_header img {
     width: 18px; /* 헤더 아이콘 크기 조정 */
@@ -140,15 +168,10 @@
     margin-top: 10px; /* 텍스트 상단 여백 조정 */
   }
 
-  .go_to_reservation button {
+  .go_to_reservation button,
+  .go_to_review button {
     width: 90%; /* 버튼 너비 확장 */
     height: 30px; /* 버튼 높이 조정 */
     font-size: 14px; /* 버튼 폰트 크기 조정 */
   }
-
-  .usersearchcafeinfo_section {
-    margin: 20px 0 80px 5px; /* 섹션 마진 조정 */
-  }
-}
-
 }

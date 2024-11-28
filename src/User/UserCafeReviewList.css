@@ -1,0 +1,131 @@
+.user-cafe-review-list {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-cafe-review-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.review-user {
+  color: #000;
+}
+
+.review-rating {
+  color: #f39c12;
+}
+
+.review-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.review-date {
+  text-align: right;
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* 예약하기 버튼 스타일 */
+.reservation-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.reservation-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.reservation-button:active {
+  background-color: #003f7f;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+  margin: 20px 0 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.pagination .active {
+  background-color: #ffcd4a;
+  color: #fff;
+  border-color: #ffcd4a;
+}
+
+/* 화면 크기 대응 */
+@media (max-width: 768px) {
+  .user-cafe-review-list {
+    padding: 15px;
+  }
+
+  .review-item {
+    font-size: 14px;
+  }
+
+  .reservation-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .pagination li {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
